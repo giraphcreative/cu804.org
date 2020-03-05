@@ -1,0 +1,18 @@
+
+
+footer {
+	@include clearfix;
+	@include padding;
+	background: $grey-dark;
+	color: white;
+	line-height: 1.5em;
+
+	a {
+		color: $grey-light;
+	}
+
+	.copyright {
+		color: $grey;
+	}
+}
+

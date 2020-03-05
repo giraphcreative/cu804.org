@@ -1,0 +1,143 @@
+
+
+header {
+	position: relative;
+	background: url(../img/bg-canvas.jpg) bottom center no-repeat;
+
+	.logo {
+		float: left;
+		max-width: 300px;
+		padding: 20px;
+		border-radius: 5px;
+		background: white;
+		margin: 20px;
+		box-shadow: 0 0 5px rgba( black, .2 );
+	}
+
+	nav {
+		@include clearfix;
+		position: relative;
+
+		button {
+			position: absolute;
+			right: 10px;
+			top: -60px;
+			width: 40px;
+			height: 40px;
+			border: 0;
+			padding: 0;
+			background: white;
+			color: transparent;
+			background: url(../img/icon-menu.png) center center no-repeat;
+			overflow: hidden;
+			text-indent: 1000px;
+			
+			@include respond-to( 400px ) {
+				right: 20px;
+			}
+
+			@include respond-to( $bp-m ) {
+				display: none;
+			}
+		}
+
+		.nav-menu {
+			display: none;
+			background: $navy;
+			color: white;
+			position: relative;
+			z-index: 1000;
+			
+			@include respond-to( $bp-m ) {
+				display: block;
+				padding: 0 20px;
+				@include clearfix;
+			}
+
+			li {
+				@include respond-to( $bp-m ) {
+					box-shadow: none;
+					position: relative;
+					display: inline-block;
+				}
+
+				a {
+					display: block;
+					padding: 15px 5px;
+					font-size: 20px;
+					line-height: 24px;
+					color: white;
+					text-decoration: none;
+					text-transform: uppercase;
+					width: 100%;
+					transition: 400ms background-color ease-in-out;
+					background-color: transparent;
+					text-align: center;
+
+					@include respond-to( $bp-m ) {
+						display: inline-block;
+						text-align: left;
+						padding: 15px 10px;
+					}
+
+					@include respond-to( $bp-l ) {
+						font-size: 22px;
+						padding: 15px 15px;
+					}
+				}
+
+				&:hover, &.open {
+					a {
+						background-color: lighten( $navy, 5% );
+					}
+
+					ul.sub-menu {
+						@include respond-to( $bp-m ) {
+							display: block;
+						}
+					}
+				}
+
+				ul.sub-menu {
+					display: none;
+					margin-bottom: 3px;
+					box-shadow: 0 20px 20px rgba( $grey-light, .4 );
+					opacity: .9;
+
+					@include respond-to( $bp-m ) {
+						position: absolute;
+						left: 0;
+						top: 54px;
+						width: 100%;
+						background-color: lighten( $navy, 5% );
+						@include clearfix;
+					}
+
+					li {
+						display: block;
+						width: 100%;
+
+						a {
+							font-size: 15px;
+							line-height: 18px;
+							display: block;
+							padding: 10px 5px;
+
+							@include respond-to( $bp-m ) {
+								padding: 10px;
+
+								&:hover {
+									background-color: lighten( $navy, 10% );
+								}
+							}
+
+							@include respond-to( $bp-l ) {
+								padding: 10px 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
