@@ -31,6 +31,12 @@
 			</a>
 		</div>
 
+		<div class="search-box">
+			<a href="/contact" class="contact">Contact Us</a>
+			<a href="/locations" class="locations">Locations</a>
+			<form name="search" action="/" method="get"><span class="search-label">Search</span> <input type="text" name="q" value="" /></form>
+		</div>
+
 	</div>
 
 	<nav>

@@ -1,0 +1,52 @@
+
+
+.icons {
+	padding: 10px 20px 30px;
+	background: url(../img/bg-canvas.jpg) bottom center repeat-y;
+
+	a {
+		color: black;
+		text-decoration: none;
+
+		* {
+			transition: 400ms all ease-in-out;
+		}
+	}
+
+	.icon {
+		@include respond-to( 768px ) {
+			margin: 0 2%;
+			width: 46%;
+
+			&:nth-child(2) {
+				clear: left;
+			}
+		}
+
+		@include respond-to( 1024px ) {
+			margin: 0 1%;
+			width: 23%;
+
+			&:nth-child(2) {
+				clear: none;
+			}
+		}
+	}
+
+	.super-title {
+		@include font-bold;
+		text-transform: uppercase;
+		padding: 15px 0 0;
+	}
+
+	h5 {
+		@include font-bold;
+		text-transform: uppercase;
+		font-size: 15px;
+		line-height: 20px;
+		padding: 0 10px;
+		margin: 0;
+		color: black;
+	}
+}
+

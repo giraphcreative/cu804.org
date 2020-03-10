@@ -7,6 +7,10 @@ the_showcase();
 ?>
 
 <div class="content-wide" role="main">
+	<div class="icons text-center group">
+		<?php the_icon_showcase(); ?>
+	</div>
+
 	<?php 
 	
 	if ( have_posts() ) :

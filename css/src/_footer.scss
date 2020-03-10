@@ -3,7 +3,8 @@
 footer {
 	@include clearfix;
 	@include padding;
-	background: $grey-dark;
+	background: $navy url(../img/bg-stripes-blue.png) center center no-repeat;
+	background-size: cover;
 	color: white;
 	line-height: 1.5em;
 

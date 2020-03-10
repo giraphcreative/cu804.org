@@ -76,7 +76,7 @@
 	max-width: 1220px;
 	margin: 0 auto;
 	background: white;
-	box-shadow: 0 0 50px $grey-light;
+	box-shadow: 0 0 50px lighten( $grey-light, 10% );
 	border: 1px solid $grey;
 	border-top: 0;
 	border-bottom: 0;
