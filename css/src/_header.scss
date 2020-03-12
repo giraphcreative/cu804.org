@@ -5,16 +5,21 @@ header {
 	background: url(../img/bg-canvas.jpg) bottom center repeat-y;
 	padding: 20px;
 
+	@include respond-to( 768px ) {
+		padding: 0;
+	}
+
 	.logo {
 		padding: 20px;
 		background: white;
 		border-radius: 5px;
 		box-shadow: 0 0 5px rgba( black, .2 );
+		text-align: center;
 
 		@include respond-to( 768px ) {
 			float: left;
 			max-width: 300px;
-			margin: 40px 20px 20px;
+			margin: 40px 20px 20px 40px;
 		}
 	}
 
@@ -24,23 +29,161 @@ header {
 		border-radius: 5px;
 		box-shadow: 0 0 5px rgba( black, .2 );
 		padding: 10px;
+		z-index: 100;
+		text-align: center;
 
 		a {
+			@include font-bold;
 			color: $navy;
+			text-transform: uppercase;
+			font-size: .85em;
+			padding: 12px 12px 12px 40px;
+			display: inline-block;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			@include respond-to( 768px ) {
+				font-size: .7em;
+			}
+
+			&.contact {
+				background: url(../img/icon-contact.png) left center no-repeat;
+			}
+
+			&.locations {
+				background: url(../img/icon-locations.png) left center no-repeat;
+
+				@include respond-to( 1024px ) {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		form {
+			display: inline-block;
+			width: 250px;
+			margin: 5px 10px 0 0;
+			text-align: left;
+
+			span {
+				@include font-bold;
+				color: $navy;
+				text-transform: uppercase;
+				font-size: .85em;
+				padding: 12px 12px 12px 40px;
+				background: url(../img/icon-search.png) left center no-repeat;
+
+				@include respond-to( 768px ) {
+					font-size: .7em;
+				}
+			}
+
+			input[type=text] {
+				width: 130px;
+				padding: 3px;
+				border-color: $navy;
+			}
+
+			@include respond-to( 768px ) {
+				margin-left: 5px
+			}
 		}
 		
 		@include respond-to( 768px ) {
+			float: right;
+			width: 320px;
+			margin: 40px 20px 20px;
+			padding: 26px 0;
+		}
+		
+		@include respond-to( 1024px ) {
+			position: absolute;
+			right: 20px;
+			top: -15px;
+			width: 570px;
 			margin: 10px 20px;
+			padding: 5px 10px;
+		}
+
+		@include respond-to( 1150px ) {
+			width: 650px;
+			padding: 8px 10px;
+		}
+	}
+
+	.online-banking {
+		display: none;
+		position: absolute;
+		bottom: 50px;
+		right: 40px;
+		background: white;
+		padding: 5px 20px 10px;
+		border-radius: 5px;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		box-shadow: 0 0 5px rgba( black, .2 );
+
+		&:after {
+			content: '';
+			background: url(../img/paperclip.png) center center no-repeat;
+			background-size: contain;
+			width: 30px;
+			height: 60px;
+			position: absolute;
+			top: -8px;
+			right: 5px;
+			pointer-events: none;
+		}
+
+		span {
+			@include font-bold;
+			color: $navy;
+			text-transform: uppercase;
+			font-size: .85em;
+			padding: 12px 12px 12px 40px;
+			display: inline-block;
+			background: url(../img/icon-online-branch.png) left center no-repeat;
+		}
+
+		input[type=text] {
+			display: block;
+			width: 300px;
+			border-color: $navy;
+		}
+
+		input[type=submit] {
+			margin-top: 4px;
+			padding: 5px 30px 5px 10px;
+			font-size: .9em;
+			background: $red url(../img/button-arrow.png) right center no-repeat;
+		}
+
+		.forgot {
+			@include font-bold;
+			font-size: .9em;
+			color: $navy;
+			margin-left: 10px;
+		}
+
+		@include respond-to( 1024px ) {
+			display: block;
 		}
 	}
 
 	nav {
 		@include clearfix;
 		position: relative;
+		margin: 20px -20px -20px -20px;
+
+		@include respond-to( 768px ) {
+			margin: 0;
+		}
 
 		button {
 			position: absolute;
-			right: 10px;
+			right: 20px;
 			top: -60px;
 			width: 40px;
 			height: 40px;
@@ -51,10 +194,7 @@ header {
 			background: url(../img/icon-menu.png) center center no-repeat;
 			overflow: hidden;
 			text-indent: 1000px;
-			
-			@include respond-to( 400px ) {
-				right: 20px;
-			}
+			z-index: 1000;
 
 			@include respond-to( $bp-m ) {
 				display: none;
@@ -70,8 +210,9 @@ header {
 			
 			@include respond-to( $bp-m ) {
 				display: block;
-				padding: 0 20px;
+				padding: 0 25px;
 				@include clearfix;
+				text-align: center;
 			}
 
 			li {
@@ -96,13 +237,12 @@ header {
 
 					@include respond-to( $bp-m ) {
 						display: inline-block;
-						text-align: left;
 						padding: 15px 10px;
 					}
 
 					@include respond-to( $bp-l ) {
 						font-size: 22px;
-						padding: 15px 15px;
+						padding: 15px 35px;
 					}
 				}
 
@@ -142,6 +282,7 @@ header {
 							line-height: 18px;
 							display: block;
 							padding: 10px 5px;
+							text-align: center;
 
 							@include respond-to( $bp-m ) {
 								padding: 10px;

@@ -34,7 +34,15 @@
 		<div class="search-box">
 			<a href="/contact" class="contact">Contact Us</a>
 			<a href="/locations" class="locations">Locations</a>
-			<form name="search" action="/" method="get"><span class="search-label">Search</span> <input type="text" name="q" value="" /></form>
+			<form name="search" action="/" method="get"><span class="search-label">Search</span> <input type="text" name="s" value="" /></form>
+		</div>
+
+		<div class="online-banking">
+			<span class="heading">Online Banking</span>
+			<form name="online-banking-login" method="post" action="/">
+				<input type="text" name="username" value="" placeholder="username/account #" />
+				<input type="submit" name="submit" value="Log In" /> <a href="#" class="forgot">Forgot Password?</a>
+			</form>
 		</div>
 
 	</div>

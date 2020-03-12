@@ -27,13 +27,13 @@ get_header();
 
 		if ( $the_query->have_posts() ) { 
 		    while ( $the_query->have_posts() ) { 
+		    	$the_query->the_post();
 				?>
 				<div class="entry third">
-				    <?php $the_query->the_post(); ?>
-				    <?php the_post_thumbnail(); ?>
+				    <?php if ( has_post_thumbnail() ) { ?><div class="post-thumbnail-container"><?php the_post_thumbnail(); ?></div><?php } ?>
 				    <h3><a href="<?php the_permalink(); ?>"><?php print get_the_title(); ?></a></h3>
-				    <p><?php the_excerpt(); ?></p>
-				    <a href="<?php the_permalink() ?>" class="btn arrow">Read More</a>
+				    <?php the_excerpt(); ?>
+				    <p><a href="<?php the_permalink() ?>" class="btn arrow">Read More</a></p>
 				</div>
 				<?php
 			}

@@ -32,5 +32,12 @@
 	&.green {
 		background-color: $green;
 	}
+
+	&.arrow {
+		margin-top: 4px;
+		padding: 7px 30px 7px 10px;
+		font-size: .9em;
+		background: $red url(../img/button-arrow.png) right center no-repeat;
+	}
 }
 
