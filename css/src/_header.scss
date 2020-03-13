@@ -19,7 +19,7 @@ header {
 		@include respond-to( 768px ) {
 			float: left;
 			max-width: 300px;
-			margin: 40px 20px 20px 40px;
+			margin: 40px 20px 20px 50px;
 		}
 	}
 
@@ -100,7 +100,7 @@ header {
 		
 		@include respond-to( 1024px ) {
 			position: absolute;
-			right: 20px;
+			right: 30px;
 			top: -15px;
 			width: 570px;
 			margin: 10px 20px;
@@ -117,7 +117,7 @@ header {
 		display: none;
 		position: absolute;
 		bottom: 50px;
-		right: 40px;
+		right: 50px;
 		background: white;
 		padding: 5px 20px 10px;
 		border-radius: 5px;

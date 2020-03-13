@@ -2,18 +2,64 @@
 
 footer {
 	@include clearfix;
-	@include padding;
 	background: $navy url(../img/bg-stripes-blue.png) center center no-repeat;
 	background-size: cover;
 	color: white;
 	line-height: 1.5em;
 
-	a {
-		color: $grey-light;
+	@include respond-to( 768px ) {
+		padding: 20px;
 	}
 
-	.copyright {
-		color: $grey;
+	a {
+		color: white;
+		border-bottom: 1px dotted rgba( white, .7 );
+
+		&:hover {
+			text-decoration: none;
+			border-bottom: 1px solid white;
+		}
+	}
+
+	.quarter {
+		font-size: .85em;
+	}
+
+	.nav-menu {
+		padding: 11px 0;
+	}
+}
+
+
+.colophon {
+	font-size: .75em;
+
+	@include respond-to( 768px ) {
+		padding: 20px;
+	}
+
+	img {
+		float: left;
+		margin: 0 10px 20px 0;
+
+		&.equal-housing {
+			max-width: 15%;
+		}
+
+		&.ncua {
+			max-width: 25%;
+		}
+	}
+}
+
+
+.copyright {
+	opacity: .7;
+	font-size: .85em;
+	text-align: center;
+
+	@include respond-to( 768px ) {
+		padding: 20px;
 	}
 }
 

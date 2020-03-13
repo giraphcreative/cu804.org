@@ -93,15 +93,15 @@
 .content-wide {
 	@include clearfix;
 	@extend .content-style;
-	@include padding;
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 20px 50px;
+	}
 
 	@include respond-to( $bp-xl ) {
 		padding-top: 40px;
 		padding-bottom: 60px;
-	}
-
-	.quarter, .three-quarter {
-		padding: 0;
 	}
 
 	@include respond-to( $bp-m ) {
@@ -114,6 +114,10 @@
 			width: 75%;
 			margin: 0;
 		}
+	}
+
+	.quarter, .three-quarter {
+		padding: 0;
 	}
 }
 
