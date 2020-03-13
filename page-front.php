@@ -10,9 +10,8 @@ get_header();
 
 	<?php the_showcase(); ?>
 	
-	<div class="icons text-center group">
-		<?php the_icon_showcase(); ?>
-	</div>
+	<?php the_icon_showcase(); ?>
+
 	<div class="content-wide home-bottom">
 		<img src="<?php bloginfo('template_url') ?>/img/title-news.png" alt="Delivering Value">
 		<div class="blog-listing">

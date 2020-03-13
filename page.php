@@ -2,28 +2,26 @@
 
 get_header();
 
-the_showcase();
-
 ?>
 
-<div class="content-wide" role="main">
-	<div class="icons text-center group">
-		<?php the_icon_showcase(); ?>
-	</div>
+	<?php the_showcase(); ?>
 
-	<?php 
-	
-	if ( have_posts() ) :
-		while ( have_posts() ) : the_post(); 
-			?>
-	<h1 class="post-title"><?php the_title(); ?></h1>
-	<?php the_content(); ?>
-			<?php
-		endwhile;
-	endif;
+	<div class="content-wide" role="main">
+		<?php 
+		
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post(); 
+				?>
+		<h1 class="post-title"><?php the_title(); ?></h1>
+		<?php the_content(); ?>
+				<?php
+			endwhile;
+		endif;
 
-	?>
-</div><!-- #content -->
+		?>
+	</div><!-- #content -->
+
+	<?php the_icon_showcase(); ?>
 
 <?php
 

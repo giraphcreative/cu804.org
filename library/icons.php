@@ -7,6 +7,9 @@ function the_icon_showcase() {
 	$icons = get_cmb_value( 'icon_showcase' );
 
 	if ( !empty( $icons ) ) {
+        ?>
+        <div class="icons text-center group">
+        <?php
         $num=1;
 		foreach ( $icons as $icon ) {
 			if ( !empty( $icon['link'] ) && !empty( $icon['image'] ) ) { ?>
@@ -21,6 +24,9 @@ function the_icon_showcase() {
                 $num++;
 			}
 		}
+        ?>
+        </div>
+        <?php
 	}
 
 }
