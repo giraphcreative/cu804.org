@@ -42,36 +42,53 @@
 		
 		.slide-content {
 			position: absolute;
-			top: 10%;
+			top: 25%;
 			right: 60px;
 			left: 60px;
-			background: white;
-			opacity: .8;
-			padding: 12px;
-			border-radius: 15px;
-			border-top-left-radius: 0;
+			text-align: center;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: -20px;
+				left: 0;
+				right: 0;
+				height: 20px;
+				background: url(../img/gold-border.png) center center no-repeat;
+				background-size: contain;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 0;
+				right: 0;
+				height: 20px;
+				background: url(../img/gold-border.png) center center no-repeat;
+				background-size: contain;
+			}
 
 			@include respond-to( 768px ) {
-				top: 15%;
-				left: 10%;
-				right: 50%;
-				padding: 25px;
+				top: 30%;
+				left: 20%;
+				right: 20%;
+			}
+
+			@include respond-to( 1024px ) {
+				top: 30%;
 			}
 		}
 		
 		h1 {
-			font-weight: 700;
+			@include font-bold;
+			color: white;
+			text-transform: uppercase;
 			padding: 0;
 
-			font-size: 18px;
-			@include respond-to( 768px ) { font-size: 22px; }
-		}
-
-		h2 {
-			font-weight: 400;
-			padding: 0;
-			font-size: 13px;
-			line-height: 20px;
+			font-size: 20px;
+			@include respond-to( 768px ) { font-size: 40px; }
+			@include respond-to( 1024px ) { font-size: 50px; }
 		}
 
 		&:after {

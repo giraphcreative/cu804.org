@@ -39,7 +39,6 @@ function the_showcase() {
 				<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
 				<div class="slide-content">
 					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
-					<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
 				</div>
 				<?php } ?>
 			</div>
@@ -91,6 +90,13 @@ function showcase_metabox( $meta_boxes ) {
         'id'   => 'image',
         'type' => 'file',
         'preview_size' => array( 200, 100 )
+    ) );
+
+    $showcase_metabox->add_group_field( $showcase_metabox_group, array(
+        'name' => 'Title (optional)',
+        'desc' => 'Set a title to show in the middle of this slide (optional)',
+        'id'   => 'title',
+        'type' => 'text',
     ) );
 
     $showcase_metabox->add_group_field( $showcase_metabox_group, array(
