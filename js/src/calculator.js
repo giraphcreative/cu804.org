@@ -367,7 +367,7 @@
                     '<'+cell_tag+' class="accrue-payment-amount">$'+loan_info.payment_amount_formatted+'</'+cell_tag+'>'+
                     '<'+cell_tag+' class="accrue-total-interest">$'+counter_interest.toFixed(2)+'</'+cell_tag+'>'+
                     '<'+cell_tag+' class="accrue-total-payments">$'+counter_payment.toFixed(2)+'</'+cell_tag+'>'+
-                    '<'+cell_tag+' class="accrue-balance">$'+counter_balance.toFixed(2)+'</'+cell_tag+'>'+
+                    '<'+cell_tag+' class="accrue-balance">$'+Math.abs(counter_balance).toFixed(2)+'</'+cell_tag+'>'+
                     '</tr>';
             }
 
