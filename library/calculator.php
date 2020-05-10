@@ -51,3 +51,34 @@ function calculator_func( $atts ) {
 }
 add_shortcode( 'calculator', 'calculator_func' );
 
+
+// calculator shortcode
+function amortization_func( $atts ) {
+    
+    // get the attributes
+    $a = shortcode_atts( array(
+        'amount' => '$20,000',
+        'rate' => '5%',
+        'term' => '10y',
+        'method' => ''
+    ), $atts );
+
+
+    // comparison calculator if applicable
+    $calculator_code = '<div class="amortization group">
+	<div class="form">
+		<div class="third">Amount:<br>
+			<input type="text" class="amount" value="' . $a['amount'] . '" /></div>
+		<div class="third">Term:<br>
+			<input type="text" class="term" value="' . $a['term'] . '" /></div>
+		<div class="third">Rate:<br>
+			<input type="text" class="rate" value="' . $a['rate'] . '" /></div>
+	</div>
+	<div class="results"></div>
+</div>';
+
+    return $calculator_code;
+}
+add_shortcode( 'amortization', 'amortization_func' );
+
+

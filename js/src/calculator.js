@@ -460,5 +460,10 @@ jQuery(document).ready(function($){
     // normal loan calculator
     $( ".calculator-loan" ).accrue();
 
+    // amortization calculator
+    $( ".amortization" ).accrue({
+        mode: "amortization"
+    });
+
 });
 
