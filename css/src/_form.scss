@@ -10,7 +10,7 @@
 	border: 3px solid #ddd;
 }
 
-input[type=text], input[type=search], select {
+input[type=text], input[type=search], input[type=password], select {
 	@extend .text-field;
 }
 

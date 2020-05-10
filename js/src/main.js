@@ -36,6 +36,33 @@ jQuery(document).ready(function($){
 	});
 
 
+	$( '.content a:not(.previous):not(.next):not(.lightbox-iframe), a.off-site' ).click(function( e ){
+		
+		// break the normal linking behavior
+		e.preventDefault();
+
+		// get the link
+		var the_link = $( this );
+		var the_link_href = the_link.attr( 'href' );
+
+		// prompt the user and if they confirm the prompt, proceed to the third party site.
+		if ( the_link.hasClass( 'bypass' ) ||
+			the_link_href.match( /lpccu.dev/i ) || 
+			the_link_href.match( /lpccu.coop/i ) || 
+			the_link_href.match( /lp.giraph.io/i ) || 
+			the_link_href.match( /www.netbranch.app.fiserv.com/i ) || 
+			the_link_href.charAt(0) === '#' || 
+			the_link_href.charAt(0) === '/' ) {
+			location.href = the_link_href;
+		} else {
+			if ( confirm( "This link is taking you to a third party provider - are you sure you want to proceed?" ) ) {
+				window.open( the_link_href, "_blank" );
+			}
+		}
+
+	});
+
+
 	// couple of quick bindings for magnific popup
 	$( '.lightbox-iframe' ).magnificPopup({ 'type': 'iframe' });
 	$( '.lightbox' ).magnificPopup({ 'type': 'image' });
