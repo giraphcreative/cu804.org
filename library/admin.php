@@ -3,7 +3,7 @@
 
 // add a 'theme options' top-level menu item
 function theme_options_menu() {
-    add_menu_page( 'Theme Options', 'Theme Options', 'manage_options', 'pure', 'theme_options_page', 'dashicons-admin-tools', 3 );
+    // add_menu_page( 'Theme Options', 'Theme Options', 'manage_options', 'pure', 'theme_options_page', 'dashicons-admin-tools', 3 );
 }
 add_action( 'admin_menu', 'theme_options_menu', 1 );
 
