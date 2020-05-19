@@ -18,7 +18,7 @@ $admin_email = get_option( 'admin_email' );
 			<?php print apply_filters( 'the_content', pure_get_option( 'column-one' ) ); ?>
 		</div>
 		<div class="quarter">
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_class' => 'nav-menu' ) ); ?>
 			<?php print apply_filters( 'the_content', pure_get_option( 'column-two' ) ); ?>
 		</div>
 		<div class="quarter">
