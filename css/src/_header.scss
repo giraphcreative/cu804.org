@@ -18,9 +18,16 @@ header {
 
 		@include respond-to( 768px ) {
 			float: left;
+			max-width: 250px;
+			margin: 50px 20px 20px 50px;
+		}
+
+		@include respond-to( 840px ) {
+			float: left;
 			max-width: 300px;
 			margin: 40px 20px 20px 50px;
 		}
+
 	}
 
 	.search-box {
@@ -50,6 +57,10 @@ header {
 
 			&.contact {
 				background: url(../img/icon-contact.png) left center no-repeat;
+			}
+
+			&.rates {
+				background: url(../img/icon-rates.png) left center no-repeat;
 			}
 
 			&.locations {
@@ -93,7 +104,7 @@ header {
 		
 		@include respond-to( 768px ) {
 			float: right;
-			width: 320px;
+			width: 400px;
 			margin: 40px 20px 20px;
 			padding: 26px 0;
 		}
@@ -102,7 +113,7 @@ header {
 			position: absolute;
 			right: 30px;
 			top: -15px;
-			width: 570px;
+			width: 650px;
 			margin: 10px 20px;
 			padding: 5px 10px;
 		}
@@ -168,7 +179,7 @@ header {
 			margin-left: 10px;
 		}
 
-		@include respond-to( 1024px ) {
+		@include respond-to( $bp-l ) {
 			display: block;
 		}
 	}
@@ -178,7 +189,7 @@ header {
 		position: relative;
 		margin: 20px -20px -20px -20px;
 
-		@include respond-to( 768px ) {
+		@include respond-to( $bp-m ) {
 			margin: 0;
 		}
 
@@ -242,6 +253,11 @@ header {
 					}
 
 					@include respond-to( $bp-l ) {
+						font-size: 22px;
+						padding: 15px 20px;
+					}
+
+					@include respond-to( $bp-xl ) {
 						font-size: 22px;
 						padding: 15px 35px;
 					}
