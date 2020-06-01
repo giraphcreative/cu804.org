@@ -5,7 +5,7 @@ header {
 	background: url(../img/bg-canvas.jpg) bottom center repeat-y;
 	padding: 20px;
 
-	@include respond-to( 768px ) {
+	@include respond-to( $bp-m ) {
 		padding: 0;
 	}
 
@@ -16,7 +16,7 @@ header {
 		box-shadow: 0 0 5px rgba( black, .2 );
 		text-align: center;
 
-		@include respond-to( 768px ) {
+		@include respond-to( $bp-m ) {
 			float: left;
 			max-width: 250px;
 			margin: 50px 20px 20px 50px;
@@ -51,7 +51,7 @@ header {
 				text-decoration: none;
 			}
 
-			@include respond-to( 768px ) {
+			@include respond-to( $bp-m ) {
 				font-size: .7em;
 			}
 
@@ -66,7 +66,7 @@ header {
 			&.locations {
 				background: url(../img/icon-locations.png) left center no-repeat;
 
-				@include respond-to( 1024px ) {
+				@include respond-to( $bp-l ) {
 					margin-left: 10px;
 				}
 			}
@@ -86,7 +86,7 @@ header {
 				padding: 12px 12px 12px 40px;
 				background: url(../img/icon-search.png) left center no-repeat;
 
-				@include respond-to( 768px ) {
+				@include respond-to( $bp-m ) {
 					font-size: .7em;
 				}
 			}
@@ -97,29 +97,25 @@ header {
 				border-color: $navy;
 			}
 
-			@include respond-to( 768px ) {
-				margin-left: 5px
+			@include respond-to( $bp-m ) {
+				margin-left: 5px;
+				margin-right: 0;
 			}
 		}
 		
-		@include respond-to( 768px ) {
+		@include respond-to( $bp-m ) {
 			float: right;
 			width: 400px;
 			margin: 40px 20px 20px;
 			padding: 26px 0;
 		}
 		
-		@include respond-to( 1024px ) {
+		@include respond-to( $bp-l ) {
 			position: absolute;
 			right: 30px;
 			top: -15px;
-			width: 650px;
+			width: 640px;
 			margin: 10px 20px;
-			padding: 5px 10px;
-		}
-
-		@include respond-to( 1150px ) {
-			width: 650px;
 			padding: 8px 10px;
 		}
 	}
