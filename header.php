@@ -34,6 +34,7 @@
 		<div class="search-box">
 			<a href="/contact" class="contact">Contact Us</a>
 			<a href="https://cu804.locatorsearch.com/" class="locations">Locations</a>
+			<a href="/rates" class="rates">Rates</a>
 			<form name="search" action="/" method="get"><span class="search-label">Search</span> <input type="text" name="s" value="" /></form>
 		</div>
 

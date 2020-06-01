@@ -19,6 +19,14 @@ footer {
 			text-decoration: none;
 			border-bottom: 1px solid white;
 		}
+
+		&.no-border {
+			border-bottom: 0;
+
+			&:hover {
+				border-bottom: 0;
+			}
+		}
 	}
 
 	ul.nav-menu { 
