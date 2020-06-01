@@ -16,7 +16,7 @@ the_showcase();
 				?>
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
-				<p class="quiet">Posted by <?php print get_the_author_link() ?> in <?php print get_the_category_list( ', ' ) ?>.</p>
+				<p class="quiet">Posted in <?php print get_the_category_list( ', ' ) ?>.</p>
 				<?php
 			endwhile;
 		endif;
