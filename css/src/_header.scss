@@ -1,5 +1,10 @@
 
 
+body.admin-bar header nav.sticky {
+	top: 32px;
+}
+
+
 header {
 	@include clearfix;
 	position: relative;
