@@ -1,12 +1,17 @@
 
 
 header {
+	@include clearfix;
 	position: relative;
 	background: url(../img/bg-canvas.jpg) bottom center repeat-y;
 	padding: 20px;
 
 	@include respond-to( $bp-m ) {
 		padding: 0;
+	}
+
+	@include respond-to( 900px ) {
+		height: 245px;
 	}
 
 	.logo {
@@ -187,6 +192,18 @@ header {
 
 		@include respond-to( $bp-m ) {
 			margin: 0;
+		}
+
+		&.sticky {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 2000;
+
+			& > .nav-menu {
+				box-shadow: 0 0 20px rgba( black, .4 );
+			}
 		}
 
 		button {

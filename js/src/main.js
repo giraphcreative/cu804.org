@@ -62,6 +62,15 @@ jQuery(document).ready(function($){
 
 	});
 
+	$( window ).on('scroll',function(){
+    	scrollPosition = $(this).scrollTop();
+    	if ( scrollPosition >= 191 & $( window ).innerWidth()>900 ) {
+    		$( 'header nav' ).addClass( 'sticky' );
+    	} else {
+    		$( 'header nav' ).removeClass( 'sticky' );
+    	}
+	});
+
 
 	// couple of quick bindings for magnific popup
 	$( '.lightbox-iframe' ).magnificPopup({ 'type': 'iframe' });
