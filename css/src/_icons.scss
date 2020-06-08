@@ -14,9 +14,10 @@
 	}
 
 	.icon {
-		@include respond-to( 768px ) {
+		@include respond-to( 400px ) {
 			margin: 0 2%;
 			width: 46%;
+			float: left;
 
 			&.icon-3, &.icon-5, &.icon-7, &.icon-9 {
 				clear: left;
