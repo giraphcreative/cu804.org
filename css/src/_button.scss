@@ -33,6 +33,14 @@
 		background-color: $green;
 	}
 
+	&.red {
+		background-color: $red;
+	}
+
+	&.blue, &.navy {
+		background-color: $navy;
+	}
+
 	&.arrow {
 		margin-top: 4px;
 		padding: 7px 30px 7px 10px;
