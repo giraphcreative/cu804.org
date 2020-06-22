@@ -278,6 +278,13 @@ header {
 						font-size: 22px;
 						padding: 15px 35px;
 					}
+
+					@include respond-to( $bp-xl+300 ) {
+						font-size: 24px;
+						letter-spacing: 1px;
+						padding: 15px 60px;
+
+					}
 				}
 
 				&:hover, &.open {
