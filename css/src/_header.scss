@@ -10,6 +10,7 @@ header {
 	position: relative;
 	background: url(../img/bg-canvas.jpg) bottom center repeat-y;
 	padding: 20px;
+	padding-top: 73px;
 
 	@include respond-to( $bp-m ) {
 		padding: 0;
@@ -20,16 +21,32 @@ header {
 	}
 
 	.logo {
-		padding: 20px;
+		padding: 10px 20px;
 		background: white;
-		border-radius: 5px;
 		box-shadow: 0 0 5px rgba( black, .2 );
-		text-align: center;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1001;
+
+		img {
+			max-width: 140px;
+		}
 
 		@include respond-to( $bp-m ) {
 			float: left;
 			max-width: 250px;
 			margin: 50px 20px 20px 50px;
+			position: static;
+			border-radius: 5px;
+			padding: 20px;
+			text-align: center;
+
+			img {
+				max-width: 100%;
+			}
 		}
 
 		@include respond-to( 840px ) {
@@ -191,11 +208,19 @@ header {
 
 	nav {
 		@include clearfix;
-		position: relative;
-		margin: 20px -20px -20px -20px;
+
+		position: fixed;
+		top: 70px;
+		left: 0;
+		right: 0;
+		z-index: 1002;
 
 		@include respond-to( $bp-m ) {
 			margin: 0;
+			position: relative;
+			top: auto;
+			left: auto;
+			right: auto;
 		}
 
 		&.sticky {
@@ -213,7 +238,7 @@ header {
 		button {
 			position: absolute;
 			right: 20px;
-			top: -60px;
+			top: -55px;
 			width: 40px;
 			height: 40px;
 			border: 0;
