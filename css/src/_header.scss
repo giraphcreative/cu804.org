@@ -58,20 +58,25 @@ header {
 
 	.search-box {
 		background: white;
-		margin-top: 20px;
+		margin-top: 10px;
 		border-radius: 5px;
 		box-shadow: 0 0 5px rgba( black, .2 );
 		padding: 10px;
 		z-index: 100;
 		text-align: center;
 
+		@include respond-to( $bp-m ) {
+			padding: 10px;
+		}
+
 		a {
 			@include font-bold;
 			color: $navy;
 			text-transform: uppercase;
-			font-size: .85em;
-			padding: 12px 12px 12px 40px;
+			font-size: .8em;
+			padding: 10px 9px 10px 38px;
 			display: inline-block;
+			background-size: contain;
 
 			&:hover {
 				text-decoration: none;
@@ -79,6 +84,7 @@ header {
 
 			@include respond-to( $bp-m ) {
 				font-size: .7em;
+				padding: 12px 12px 12px 40px;
 			}
 
 			&.contact {
