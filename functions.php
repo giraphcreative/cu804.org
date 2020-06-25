@@ -14,7 +14,7 @@ function require_multi( $files ) {
 
 
 // include utility functions
-require_multi( 'core', 'admin', 'metabox', 'metabox-theme', 'images', 'paginate', 'metabox', 'showcase', 'icons', 'button', 'calculator', 'editor' );
+require_multi( 'core', 'admin', 'metabox', 'metabox-theme', 'images', 'paginate', 'metabox', 'showcase', 'icons', 'button', 'calculator', 'editor', 'kjecalc' );
 
 
 // require composer autoload

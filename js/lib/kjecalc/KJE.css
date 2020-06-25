@@ -1,0 +1,2460 @@
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    -webkit-text-size-adjust:none;
+}
+
+body.KJEReportBody {
+
+    background-image: none;
+}
+
+#KJEAllContent {
+    font: normal 100% Arial, Helvetica, sans-serif;
+    background: #FFFFFF;
+    color: #000000;
+    padding: 40px 0 0 0;
+}
+
+#KJERequiredNote, #KJEUpdateNotice {
+    margin-right: 10px;
+    margin-left: auto;
+    text-align: right;
+}
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+    padding: 0 !important;
+    border: 0 none !important;
+}
+
+#KJEReportText {
+    display:none;
+}
+
+#KJEAllContent p {
+    margin: .9em 0;
+}
+
+
+#KJECalculatorScreenSize {
+
+}
+p.KJEScheduleNote {
+    display:none;
+}
+
+div.KJEDropper:focus, div.KJEGraphDropper:focus
+{
+    outline: 2px solid #597BB2;
+    outline-offset: -2px;
+}
+
+
+
+.KJEFontTitle {
+    font-size:1.2em;
+    font-weight:bold;
+    line-height:1.4em;
+}
+
+.KJEFontHeading {
+    color:#000000;
+}
+
+.KJEError {
+    color:#BB0000;
+}
+
+.KJEMissing {
+    color:#BB0000;
+}
+
+.KJETitleExtra {
+
+}
+
+.KJETitle     {
+    font-size: 1.3em;
+    text-align: center;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABVCAYAAAA49ahaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xOdTWsmQAABNhSURBVHhe7ZwJdBRFHsblFkVFxWOzuu7hsbvuureuq2913z4vVPBCQEE0gjfifSKiqKAoKuCBIIiCiBKMIociIkZRQJFD5JBLRAOEQwg3ydR+v7JrXqWpTBKYxODO/73v9UxPdXfV1/+zqnt2y0hGMpKRjGQkIxnJSEYykpGMZCQjGUm3GGNqgOgr32u6fdFnUGvJkiX1582b12jChAlZQ4cOzRowYEBW3759s5566qmsnj172n1jxozJUrusRCIB9tdxtTlPdGornE+/7aft7q+99lrtaPdPRxhwNPCa0fc9hEbCPhr4b7Zs2XKCiDx77Nixl+fk5PQXCfkvvvhi4umnnzaPP/646d69u3nooYfMfffdZ7ePPPKIefbZZ43ambfffnvh/Pnz79J5/iLU1zntjYo+N9P2pPfff/+Axo0bu2vX0A2y4PsuJyKqngYBgXWEWuzTIOuJxGNWrFjRSmQMnThx4uK33nqrQAStGTx48Ob+/fsn+vTpY3r37m169OhhunXrZrp06WI6depk7rjjDnPLLbeY66+/3lx99dWmXbt25tJLLzWtW7feqjYFa9eunbxu3bqOa9asOZ7rcj2u667tC6S2bNmyZps2bepEu3YNgUANqK7QQJ8P2rRp0/GrV68e+OWXX349ZcqUTR988EFi3LhxZvTo0SY3N9e8+uqr5qWXXjLPP/+8eeaZZ8wTTzyR1NJ7773X3HXXXebWW281N9xwg7n22mvNlVdeaS677DJINcOGDdNljCkqKirWTVs/derU4UOGDDksuj7E2m3UNUuqv91lRIPYXWQeJrSW9rywePHi/Dlz5pgvvvjCfP755+aTTz4xIta8++67ZuTIkWb48OFGRJgXXnjBOG197LHHTNeuXa3pd+zY0dx+++1JV4D2QjTk6ty63A+yefNm9ieaN28+5/777+8qDT5ZfThU+IdwuJokCXWfq72o40eqs7/Q9hppzWcFBQVbli5dahRczKJFi8zcuXMtsdIm8/HHHxv5PHyjefPNN5Pa2q9fPyO/akaMGGHkIoxciVm1ahWclSm6gaZ9+/bmzDPPNPKlxdLm5bpRPbZu3QqpJ2zcuPFQ3cg60vB6uICo29Vb1PE/ygx7FBYWbli5cqUlQ8Sa5cuXm2+//dZqFcTOmDHDfPrppyYvL89qq3yrJRGSabdt2zZTXFwcUVV+0fWttspnm+eee87633PPPbdYRH/w+uuv/1lN8PM15FJqat92/rbaiTpbW9r5mnznlu+//94ocBiRa2SCVoMg9ptvvjELFy408q1WW9FEiMQlcEyISPbJJ5sFCxaYUaNGWS1WumW30sCoVVjWr19vNV0+ujg7OztfrmaU+ni0fqoj8n8fdb16iTTjAGF/4Xci715p5XoIZDAQgdawhVyRbfLz85PaOn36dAs0ujRBywlmjz76qLn77rtLBKsHHnigBKlcMxXJWMAbb7yRkEXkqY8/o9/RMKqXqK+N1LmmIm2JfGcCEtBQ+a6kCbPdsGGD1USnrV999ZUll99Cwn5lCebJJ5+0wapz585JUm+88UZLqgiKWv8gpGGkXZw7lagv29SHZ9Wfo6Nh/PiiftkqRqAS+rM6N0dBKEFAglTM3ScV7YmTqly1VJ/JcaRbitDJDCBEKm7ECb5bgcc0bdrUtGjRwkyaNMn619JE196qPnyqfl6nr/viY6Ph/Tiizu4t1BMOk+mOmTVrVgLtIMJDmjN/TF/+y26d+S9btsyae2mEIpMnTzYqT02vXr2CpGL+pFa+cBMuuOACS+rZZ59tCwOuV5aozToF1of10RYMP5qoA2hoI/nKJ0VoMX4RH4k5f/fdd5Y0tBJiAYRCNFqMhmoQjCco3JiBAwfaUhRS8aUQGNdUApwTLOHBBx80559/fpLUs846y7bHn6cS8mVlICulIEdEw6t6UT9qqQP7S/t6TJs2bTO5JlFc5FpfBikQC4GYJNrCFjIJUmhuacJvRHeVq7aqwp9SVUEYpJLs4zPvvPNOew0nXKtVq1bmvPPOK0Eqn/HLqYQbd+GFFyZ0I1vr68HRMKtWdOHaIvVYpTeryC+pivBfItimSRD79ddfG/wrJGLuEIAfRYN1rB1MSCBn8ODBNvnHn1KqPvzwwyXq/5tvvtkS4Ws7RYOIsaQ2adLEkkryD6655ppSXQ194Wacdtpp5rrrrkMBbomGWbWivtQSeaco3/ueVOe9994zH330kdUI3ADEkheSU+IOIJgt3/GtqYRiANMnaffLVJWbyTL1pptuKqF9BED24U+V5G9HKp/x0SGhvxAKzjjjDK41WrurLmDpYrZOln88cMyYMR8yiUEFRIlJ8g6xdJ4kfubMmdYdzJ4921Dvs6VELUuYA3ATKnHTxz/edttt5p577rE+2gnnb9OmTZJUSPRJValqpwvj2sp3fLUjFZxzzjkUFX+3A64KUT9qSCsaiLD+qs+LXnnlFTsJQnn5zjvvmPHjx9uSE8ePJuFnIdgBn1qW5OTkJLWUnDNu+vhTXINv+ky+NG/efLsg5UhFA5nJilsJvp4MwScVXHLJJWPkTqqmfFU/aspHHjF06NDFaBMTH/psVE9bYtFY0hq0FnKJzhAM0GCygbKEGxWf9kNLnekT9fHfTjD9K664IulP46SipZAKMHVfmHtgf5xUNF5++1fRsCtX5NTryX/+VwFkGekOERpiIQINY5aJyA25Y8eOtb4W7YXkDz/80BYDZQnH9+zZM+lLnZYS7dFSiPU1Dou4+OKLU5q+I5Wb5QsT4HFCHeRy5kXDTr9gBtIy67hlvofJ1CbKLIsxT8wOjWVSg3lQljdwB5CL5uIfCWTyv3YWqqwghRDkWELB7KnrfV9KMOI6fvaARqcyfZ9UCgbXBzSc40KEAlVmRQqaTS0J6RaVm7srx2TWvK4i+CtKxIswSwYDsWgsPo6ITSqE1kIuQQyCcQ0ADSytxveFQgGNcmZPUHK+FFIxWScQxMx/s2bNglEfOEIBqRP5MsJ8LuSHCAXcDPnh5hEN6RVdn6UI8tJ/yU9uRnswS4hFo8gXIYHggtZC7qBBgyzBaJUDBKMd5RFMmhQKQp3Z40vRWOYUnGANTkuJ2qlM//TTT7ckkisjWFeITB+MQxSkf2VA16ccrato204amcC/MWDSHEwU30fqg9ZCLi4BzYVgfC5LI4AOlif6I6Q6BEC3JgWhzOST4Duh9IT0uJbGo75PKuBc9J3jQkQ6nHrqqbZoEAWVRmptlZ4tZIYJBgqxrBGhtTh7tJb0B3LRXJaWgSMZoMnkk+UV3ACWgMmzegqcliF8VupTwpem0lKHEIEhQCpbFS6dIirSJ+o/pr+fInhnpRkJAgbEoiX4PKIz/s+Ri+ZCBj4XkonkEM1nApgfZMoSJmA4JxrDaipEO0H7ITTkS31Cd4ZUIIvpH1GRPlH/dxf20SCeQ1swH0yS4IGPY7COXMwKfwvBVDAQEgcz7xUR/DCajl92QjXFulMoL01Faoi8EByhQClcpZBaQ1G/gfzoeCaF8W2kJi5nJJBArtNc3AIE4xpCIK8ta00pLsxc+dN3VGck+yGzByFCd5RUKcc6WUzDiI70ybRp0/YUee+yvo6GMJvToUMH6+8cuU5zqXzwuQ5osgPfIZ45gp0R0jg/2pempTtLKCAoL1y4ML3rWBpDDZWZDeVPJ15++eW2JLzqqqvsUgZa68hlOg63gM91Ggzwvw58h3yIZYJlRwV34EhNp9mDOKkojUrv9JJKaTp//vz9pKEDibYk223btrVPhThy0Vz8LQTjcx3JdCgO9vM7BDPvWpHA5YTJlAkTJth+lEXozmhppZGqMdRVOnWgCOx/0UUX2dkeptmys7PtA2KQ69yCIxgNdmlQHPwGaIdmM8mxI8RyDHkvmQek7iyhoCpJrSWf8nOROprgwGolExiOXDQXt+AIRnsBJAPSIQe3z7XBlUA0WudP5VVEKH0pi8kE0k0oqCxSayjRPl0mu468kEqE0tCRSz2NW2BeEoLRYMwSQHQc7Ocm0I727sZQffGswI4IWstKAzc13aQquBbh/iI60iPqc82VK1d2la9MkMKgEY5cNJf1ddyCIxgNhmTIApDt4PbxO+1oz7GAm0QQY3Ug1dJ1KmG+lkCJxoaIS4UQoUCp4uT8/Pw9IzrSI+prLeVpHdXZBNGW6oXISyUDucxjQi7aC8GQAxxZkA3cd0cgoD3HcYM4D+dDa6m8dlSouuJLJGUhRKaD8u4uOm1616x0whoyy+OUZxa4vNCRi+ZCLtrra7ADZMfh/057juMcwCXznJuKrKJFghMmw8tLbIhID4lBgwZl65TpnVThhPJZ9XXHhrj0xSfXJ9hpcJxoB7eP32nLMcDV7j6o0Moz/1qaMNdK+hYi0iFAYgmozYoZM2YcFVGRPlFU3kM4MDc3t7sjFZB0gzgZAJLKQug4d07Oz1ypE54d2BE/y5I414qT6RAi0oeC6XQp1AERFekTaQvPTP1Wpni+AsxSn1gfjhB8ZIiwOFx7R6IPXINbgoZM5m1JbXg4o6Ly8ssv7xChtOndu/dkSNVp0mv+Oul+wpnCP/r165dPZKV6AT4RmDOP+zDxQaT3f6sIOC8T3k4IPAQxrkuQ4ymYiggFgnsCpbyEAt3sbSNGjOAJuAZC2n0q61MnCr/Oy8t7VeZUzAAdHMFUU265hNQoRFgI7njA+bg5zEI5YWXWzz0hmOUW3eSoRWpB05k5qwihQKnfOqWSLXQdXn5LO6l1dGLe7Dhcd72xIvhyn1QHf/mX5RSfrBBC5wAUBu7mEP3JO31SIYYswn8utSxhJbcihII+ffrkYZ2VQqpOWl/4g3CccKx81KgQGVQ0TljvT0VcKrAa64QlEzTTJ9QBF8PKQHmEoiBEXGlQhrJx5syZV2i8fxL20inSTuqhClYn68S8wnPs3Llzr1Y1tN7XHsrDIq92Z1qPqBsiLQR3HgjkgWEnPDfAfp9MB/ZjEeUR0qsQeaWhY8eOUxUbjtOh+wrpf69VRKKpLXXyO7Q9XqaZJVN/WQMrdmTwloh+o/9WCFa+hpUXmLqf8DPhEifTBzmuW8dPJRUhVQGqSIrTSuNBQ1n0TK+WxkUX+pMu8lvV5/srmZ/KwEiPeBAtLqwAhIhLBR64cMJcK+eOExkHM1RlSXnNX30o7tu3b47GyVsrewn2BeJo+JUjugiv9RylC9VUGdhenShicsQ3fSc8O+WbtkOIGIBmu0dyEOr/ULs4WBpXn6KjwsKT3iES41CQnFNQUPBXHUIatY9Q+a+06yJ7aABZ2tZatmzZQR06dJjFyw4hoQpi0iRERAgsafvksIoQahcHKwhllbNkJiESfajg2DRu3Lh2as5bN3YFmTGPHz++conVoDGJk4QjdNF9ZfZtRV7wLQUGymJfiIg4yFd53NIJ6VKoXQgszKUqYfHvTJCHiHTAoqQcIzSuvXUIcx2/0Zb8nFea0NjKcwG6GObPv0Hgcw7lgur0GyIwaH9kAXQ4RIYP5lid6eu89mmWULsQWFlNJbwxQyYSIhPQv169es3euHFj8iU1HZYk0f9cJcIFRcKRW7ZsmaXtdsTia1mWDpHhg+emnFCWsuQSahcHpJATlyaumooT6SBCi7t37z579erVJ0ZD+vFFPKK5BwoniFgmH7azQx5ZpBAIkQKYCvSfkUKzcAehtg6OFDTQfxQoLlgKEzY+kQ4E2S5duoxasGABGU31eZMaQtWhvwl19fkQETtA2rndS1Ik6aVFflZU/dyUZ7FC7YBPCt95bLM0gWzmI/xjIiTUlxWdO3fuqZyb/yWovn9aI1KPkW/9mXzTSzK7EhpLsGDqLk4SoC53wsIfM1H+7wFSLJgjKC3x53o8YhQ4rkhWkyeX0Fh9PVx9Ji40iIZQ/USd+4XAE4KHqMNDpH0l8hxeSounSUyM+OZLEUHgCJBRAqwi8Bh7SMg6eBAOy4gfpxs2fdiwYX+LurzriMbFn9DsJVdwjyL6HN8d8IoNa0cuI+Czr9Q8bhknIg5uBC+whYSnrFnbiml4QtpZqHx21ooVK1qrb+ldbq4K0dhsCqItWvsruYPOIm6NPlvHSUbA60BoLZWOE1IqanmPjBIg4PAAnP8+qhO0k4DIXIF3TELHrFImMWzSpEktVaoerKaVX8tXpjAAEUnt3FBa+x+5g7bCPOdvWfGEDCeUtdT6/gQ20R3NJHjxfyh+e4RTMbOP/3RRXlqKZq5VkHpTpt6ksLCQ2TV8Z6Ooaz8d0aBspSIf+oS0ckOcINakWCr57LPPkuB91ng7J/hfXghmzsBpZ3Z29sZu3boNzcnJOUVN+Hc2/o9gT+F3wpFRV346okHylkvDaKD/EfqIyIXaForkRGnkIaRcPIHNMgtvlfDokGr1YmUAm9q3b79UFdHH+u1R3bB/L1q0iP/C2lOHVd+oXhmiAVNTU1vz3yunyD10kq+lKitQMFsrDV01ZcqUAvne5QMGDFgpFObm5i4eOXLktNGjRw9XoBqspP2RJUuWNFN7Zs0aCkz21I8u8f8tIoNpNvsvFyLlKOFfwjF81r5fanu00ET4ZwR+w5xZO9q1/qevqkTktBUw1103KmckIxnJSEYykpGMZCQjGfl/kd12+x9c8JdO8qrXkwAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+    background-position: -8px -8px;
+    background-size:85px 85px;
+}
+.KJECalculatorTable {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    right:0;
+    left:0;
+    padding: 4px 0 4px 0;
+    border: 1px solid #666666;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 5px 5px 10px #DDDDDD;
+    -webkit-box-shadow: 5px 5px 10px #DDDDDD;
+    -moz-box-shadow: 5px 5px 10px #DDDDDD;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(233,233,233,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9e9e9',GradientType=1 ); /* IE6-9 */
+}
+
+.KJECalculatorReportTable {
+    padding: 0 0;
+    border: 0;
+}
+
+.KJECalculator {
+    font-size: 0.9em;
+    right:0;
+    left:0;
+    height:100%;
+    position: relative;
+}
+
+.KJECalculator p {
+    font: normal 0.9em Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+.KJECalculator .KJEMain {
+    display: inline-block;
+    position: absolute;
+    right:0;
+    top: 0;
+    left: 0;
+}
+
+.KJEInputs {
+    padding:0;
+    display:none;
+}
+
+.KJENoJavaScript {
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    background: #FFFFFF;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid #666666;
+    text-align: center;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+span.KJERequired {
+    color: #BB3333;
+}
+span.KJERequiredShowHover {
+    display: none;
+}
+
+div.KJEButtonIsScrolling {
+   background: none;
+   border: none;
+}
+div.KJEButtonIsFixed {
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 2px 2px 2px #666666;
+    -webkit-box-shadow: 2px 2px 2px #666666;
+    -moz-box-shadow: 2px 2px 2px #666666;
+    margin: 0;
+}
+
+#KJEScrollSticky, #KJEFixed, #KJECommandButtons, #KJEReportButtons {
+    z-index: 1;
+    width: 400px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#KJEScrollSticky {
+    line-height: .9em;
+    padding-bottom: 10px;
+    width: 95%;
+}
+
+#KJEReportButtons, #KJEMoreButtons1, #KJEMoreButtons2, #KJEMoreButtons3 {
+    margin: 0 auto;
+    text-align: center
+}
+
+.KJECommandButton, .KJEMoreButton {
+    -webkit-appearance: none;
+    color: #ffffff;
+    background: #333333;
+    padding: 4px 2px;
+    margin: 4px 2px 7px 2px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    white-space: nowrap;
+    width: 180px;
+    border: 3px solid #bbbbbb;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+button.KJEMoreButton {
+    display: inline-block;
+}
+
+.KJECommandButton:active, .KJEMoreButton:active {
+    position: relative;
+    top:2px;
+}
+
+.KJEMain table {
+    border-collapse: collapse;
+    right:0;
+    left:0;
+    table-layout:fixed;
+    margin: 0;
+}
+
+.KJEMain th, .KJEMain td {
+    padding: 0;
+    overflow: hidden;
+}
+
+#KJEMenuWindowTitle {
+    display: block;
+    height: inherit;
+    text-align: center;
+    padding: 4px 0 0 0;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+div.KJEMenuHeader {
+    text-align: center;
+    vertical-align: bottom;
+    background: #eee;
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+button.KJEMenu {
+    padding: 0;
+    background:inherit;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAHFJREFUSEvtk0EKgDAMBPOZUvAHfbBH8WW+YZscFGILQq3xsoe5LEsmh0QASFkPRGLOcOnJJbYtIqBYs35xNo/ilHekvLxiU+5zKW4Kv4m/gmLNfIFXPQLfyaBYM1/gVY/AdzIo1qxfnE0jjsZtEQUAqdkDGASodTO6AAAAAElFTkSuQmCC);
+    background-repeat:no-repeat;
+    background-position:center;
+    z-index: 999;
+    display: none;
+    border: 0;
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    margin: 0;
+    margin-top: 17px;
+    margin-right: -14px;
+}
+button.KJEMenu:active,
+button.KJEMenu:focus,
+button.KJEMenu:hover,
+button.KJEMenu:active,
+button.KJEMenu:focus,
+button.KJEMenu:hover {
+    border: 1px solid #597BB2;
+    border-radius: 3px;
+    outline: #88B0F1 solid 2px;
+    outline-offset: -1px;
+}
+
+#KJEMenuContainer {
+    width: 100%;
+    height: 1px;
+    overflow: visible;
+    text-align: right;
+}
+
+#KJE-PODEFN-MSG_MENU {
+    top: 60px !important;
+}
+
+#KJEWait {
+    position: relative;
+    top: 18px;
+    text-align: left;
+    background-image: url('data:image/gif;base64,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');
+    background-repeat:no-repeat;
+    background-position:center;
+    z-index: 999;
+    display: none;
+    border: none;
+    width: 128px;
+    height: 128px;
+    /* css3 */
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+#KJEWaitContainer {
+    height: 1px;
+    border: none;
+    overflow: visible;
+    text-align: center;
+    z-index: 999;
+}
+
+.KJEInset {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#KJEReport {
+    display:none;
+    text-align: left;
+    vertical-align: middle;
+    padding: 30px 5px 5px 5px;
+}
+
+#KJEReport, #KJEReport p {
+    font-size: 1.0em;
+    line-height: normal;
+}
+
+.KJEDefinitionsHeader {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height:1.4em;
+}
+
+.KJEDefinitionPopup p {
+    font-size: 1.0em;
+    line-height: normal;
+}
+
+.KJEDefinitionPopup, .KJEDefinitionPopup dl, .KJEDefinitionPopup dd, .KJEDefinitionPopup dt, .KJEDefinitionPopup h3, .KJEDefinitionPopup th, .KJEDefinitionPopup td, .KJEDefinitionPopup ul, .KJEDefinitionPopup li, .KJEDefinitionPopup ol {
+    font-size: 1.0em;
+    line-height: normal;
+}
+
+button.KJEDefinitionIcon:active,
+button.KJEDefinitionIcon:focus,
+button.KJEDefinitionIcon:hover,
+button.KJECloseButton:active,
+button.KJECloseButton:focus,
+button.KJECloseButton:hover {
+    color:#000055;
+    background:#fff;
+    border: 1px solid #597BB2;
+    border-radius: 3px;
+    outline: #88B0F1 solid 2px;
+    outline-offset: -1px;
+}
+
+button.KJEDefinitionIcon {
+    color:#fff;
+    background:#0000D4;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0 0;
+    font-size: 1em;
+    border-radius: 20px;
+    border-width: 0;
+    cursor:help;
+    margin-left: 2px;
+    margin-bottom: 4px;
+    float:left;
+}
+button.KJEDefinitionIconMenu {
+    color:#000055;
+    background:#ffffff;
+    border-width: 1px;
+    margin-top: 49px;
+    margin-right:2px;
+    margin-left: 0px;
+    margin-bottom:0px;
+    float:right;
+}
+button.KJECloseButton {
+    color:#fff;
+    background:#0000D4;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0;
+    font-size: 1em;
+    border-radius: 2px;
+    border-width: 1px;
+    cursor:hand;
+}
+
+#KJEDefinitions {
+    width:100%;
+}
+
+#KJEDefinitionsDL {
+    padding-left:10px;
+    margin-top: 1em;
+}
+
+#KJEDefinitionsDL dt.KJEDefinition, dt.KJEDefinition, h3.KJEDefinition {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.0em;
+    padding:0;
+    margin: 0;
+    line-height: normal;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+#KJEDefinitionsDL dd.KJEDefinition, dd.KJEDefinition {
+    margin:0;
+    text-align: left;
+    font-weight: normal;
+    padding: 0px 10px 20px 10px;
+}
+
+#KJEDefinitionsDL p.KJEDefinition, #KJEAllContent p.KJEDefinition {
+    line-height: normal;
+    padding: 0 10px .7em 10px;
+    text-align: left;
+}
+
+#KJEDefinitionsDL td, #KJEDefinitionsDL th, #KJEDefinitionsDL ul, #KJEDefinitionsDL li, #KJEDefinitionsDL ol {
+    font-size: 1.0em;
+    line-height: normal;
+}
+
+#KJEReport td, #KJEReport th, #KJEReport ul, #KJEReport li, #KJEReport ol {
+    font-size: 1.0em;
+    line-height: normal;
+}
+
+.KJECloseButton {
+    color: #5D60C6;
+    float: right;
+    cursor: pointer;
+}
+
+.KJECloseButton:hover {
+    color: rgb(0,0,212);
+}
+
+.KJEContent {
+}
+
+.KJEMain input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.KJEInputContainer {
+    text-align: left;
+    overflow: visible;
+    position: relative;
+    height: 35px;
+    width: 100%;
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease;
+}
+
+.KJEInputContainer:hover {
+    background-color: #FFFFFF;
+}
+
+.KJEInputContainer .KJEInputFieldContainer {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.KJEInputContainer .KJESlider {
+    top: 0;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.KJEInputContainer .KJEIncrementer
+{
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+
+.KJEInputContainer .KJEScale {
+    font-size: .87em;
+    left-margin: 10px;
+    border-color: #666666;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.KJEInputContainer .KJELabel {
+    text-align: right;
+    cursor:default;
+    overflow: visible;
+    display: inline;
+}
+
+.KJEInputContainer .KJEOutputLabel {
+    overflow: visible;
+}
+
+.KJEInputContainer .KJELabelBold {
+    font-weight: bold;
+    text-align: right;
+    overflow: visible;
+    display: inline;
+}
+
+.KJEInputContainer .KJEHelp {
+    text-align: right;
+    cursor:help;
+    overflow: visible;
+    display: inline;
+}
+
+.KJEInputContainer .KJEHelp:hover {
+    color: #000055;
+}
+
+.KJEInputContainer .bold {
+    font-weight: bold;
+}
+
+.KJEInputContainer .KJETrailingLabel {
+    overflow: visible;
+    padding: 0 0 0 10px;
+}
+
+.KJEInputContainer .KJERadioTrailingLabel {
+    overflow: visible;
+    padding: 0 0 0 5px;
+    display: inline-block;
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+}
+
+.KJEInputContainer .KJERadioHolder {
+  position: relative;
+    display: inline-block;
+}
+
+.KJEInputContainer .KJETrailingLabelDisable {
+    color: #565656;
+}
+
+KJERadioFieldContainer {
+
+}
+.KJEInputContainer input:disabled, .KJEInputContainer textarea:disabled {
+    color: #565656;
+    background: #ededed;
+}
+
+.KJEInputContainer .KJEDropBox {
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.KJEInputContainer select.KJEDropBoxModern {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 1px;
+    -webkit-appearance: none;
+}
+
+div.KJEDropBoxDivModern {
+    border: 1px solid #555;
+    overflow: hidden;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAAsUlEQVQ4T9WRyxGDMAwF1RIFUY6boZf0og6UiEHiWZbBEHLIzryDZHv9o/9ARB6JowUzf5VGiDkjzrc42W534myF0FTkxfwp90HcCGFeZNY16/IgVGwwkyLaRxnNSz0RF2ZSHO/JbN46197M6Ek1vZPt4/WzOFGqvcNrIngCpJYOyhT7wShUyrRJRmWKCU+lI7JRSmk/oJe0aUGwj7eKSZsWk6LsKI4WmfBKGuET+QFEbxoHa1iX1waWAAAAAElFTkSuQmCC);
+    background-repeat:no-repeat;
+    background-position: right;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    top: 15px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    box-shadow: 2px 2px 2px #333333;
+    -webkit-box-shadow: 2px 2px 2px #333333;
+    -moz-box-shadow: 2px 2px 2px #333333;
+
+}
+
+.KJEInputContainer .KJEInput {
+    font-weight: normal;
+    font-size: 0.9em;
+    box-sizing: content-box;
+    padding: 2px;
+}
+
+.KJEInputContainer input.KJEInputModern {
+    top: 15px;
+    border: 1px solid #555;
+    padding: 2px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    box-shadow: 2px 2px 2px #333333;
+    -webkit-box-shadow: 2px 2px 2px #333333;
+    -moz-box-shadow: 2px 2px 2px #333333;
+}
+
+.KJEInputContainer input.KJEInputModern[type='radio'] {
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+    width:15px;
+    height:15px;
+    border:1px solid #333333;
+    border-radius:50%;
+    outline: none;
+    box-shadow:0 0 5px 0px darkgray inset;
+}
+
+.KJEInputContainer input.KJEInputModern[type='radio']:focus,.KJEInputContainer input.KJEInputModern[type='radio']:active {
+    box-shadow:0 0 5px 0px #5D60C6 inset;
+    outline: #88B0F1 solid 2px;
+}
+
+.KJEInputContainer input.KJEInputModern[type='radio']:before {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin:20% auto;
+    border-radius:50%;
+}
+
+.KJEInputContainer input.KJEInputModern[type='radio']:checked:before {
+    background:#333333;
+}
+
+.KJEInputContainer input.KJEInputModern[type=checkbox]  {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    padding-bottom: 5px;
+    margin-left: 8px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border: none;
+}
+
+.KJEInputContainer .KJEArrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid rgba(0,0,212, 0.6);
+    box-shadow: 0 2px 0 rgba(0,0,212, 0.3);
+    -webkit-box-shadow: 0 2px rgba(0,0,212, 0.3);
+    -moz-box-shadow: 0 2px rgba(0,0,212, 0.3);
+}
+
+.KJEInputContainer .KJEArrow.active {
+    border-bottom: 12px solid rgba(0,0,212, 0.5);
+    cursor: pointer;
+}
+
+
+.KJEInputContainer div.KJELine {
+    border-width: 0 0 2px 0;
+    border-style: dotted;
+    border-color: rgb(102, 102, 102);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.KJEInputContainer .KJELine.active {
+    border-style: solid;
+    border-color: rgb(102, 102, 102);
+}
+
+hr.KJEDivide {
+    border: 0;
+    width: 100%;
+    height: 1px;
+    color: rgb(150, 150, 150);
+}
+
+hr.KJEFooterLine {
+    border-top: 1px solid #000;
+    width: 100%;
+    height: 1px;
+}
+
+.KJECenterText {
+    text-align:center;
+}
+
+.KJEBold {
+    font-weight: bold;
+}
+
+.KJEBoldCenter {
+    font-weight: bold;
+    text-align: center;
+    cursor:default;
+    overflow: visible;
+}
+
+.KJESubTitle  {
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: normal;
+}
+
+#KJEReport p.KJEFooter, p.KJEFooter, .KJEFooter  {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+#KJEGuiDataPoint {
+    color:#000000;
+    background:#ffffff;
+    border:1px solid #5D60C6;
+
+    position: absolute;
+    display: none;
+    z-index: 99;
+    padding:9px;
+    margin:1em 0 3em;
+    max-width: 520px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px #333333;
+    -webkit-box-shadow: 3px 3px 3px #333333;
+    -moz-box-shadow: 3px 3px 3px #333333;
+}
+
+#KJEGuiDataPoint dt {
+    font-weight: bold;
+}
+
+#KJEGuiDataPoint dd {
+    padding-bottom:5px;
+    padding-top:5px;
+    margin-left: 20px;
+}
+
+#KJEGuiDataPoint:before {
+    content:"";
+    position:absolute;
+    top:-10px; /* value = - border-top-width - border-bottom-width */
+    right:auto;
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    left:39px; /* controls horizontal position */
+    border-width:0 10px 10px;
+    border-style:solid;
+    border-color:#5D60C6 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+
+/* creates the smaller  triangle */
+#KJEGuiDataPoint:after {
+    content:"";
+    position:absolute;
+    top:-8px; /* value = - border-top-width - border-bottom-width */
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    left:38px;
+    right:auto; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width:0 11px 11px;
+    border-style:solid;
+    border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+span.KJEGuiErrorPopup, span.KJERequired:hover span.KJERequiredShowHover {
+    left: 5px;
+    top: 19px;
+    text-align: center;
+    color:#000000;
+    background:#ffffff;
+    border:1px solid #5D60C6;
+    position: absolute;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    padding:9px;
+    margin:1em 0 3em;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px #333333;
+    -webkit-box-shadow: 3px 3px 3px #333333;
+    -moz-box-shadow: 3px 3px 3px #333333;
+    -webkit-animation: fadeIn .4s;
+    animation: fadeIn .4s;
+}
+
+span.KJEGuiErrorPopup:before, span.KJERequired:hover span.KJERequiredShowHover:before {
+    content:"";
+    position:absolute;
+    top:-10px; /* value = - border-top-width - border-bottom-width */
+    right:auto;
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    left:39px; /* controls horizontal position */
+    border-width:0 10px 10px;
+    border-style:solid;
+    border-color:#5D60C6 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+span.KJEGuiErrorPopup:after, span.KJERequired:hover span.KJERequiredShowHover:after {
+    content:"";
+    position:absolute;
+    top:-8px; /* value = - border-top-width - border-bottom-width */
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    left:38px;
+    right:auto; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width:0 11px 11px;
+    border-style:solid;
+    border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+span.KJEGuiErrorPopup span.KJERequiredShowHover {
+    display: inline;
+}
+
+div.KJEGuiDefnPopup {
+    color:#000000;
+    background:#ffffff;
+    border:1px solid #5D60C6;
+
+    position: absolute;
+    display: none;
+    z-index: 99;
+    padding:9px;
+    margin:1em 0 3em;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px #333333;
+    -webkit-box-shadow: 3px 3px 3px #333333;
+    -moz-box-shadow: 3px 3px 3px #333333;
+    -webkit-animation: fadeIn .4s;
+    animation: fadeIn .4s;
+
+}
+
+div.KJEGuiDefnPopup dt {
+    font-weight: bold;
+    text-align: left;
+}
+
+div.KJEGuiDefnPopup dd {
+    padding:0;
+    margin: 0;
+    text-align: left;
+}
+div.KJEGuiDefnPopup:before {
+    content:"";
+    position:absolute;
+    top:-10px; /* value = - border-top-width - border-bottom-width */
+    right:auto;
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    left:39px; /* controls horizontal position */
+    border-width:0 10px 10px;
+    border-style:solid;
+    border-color:#5D60C6 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+div.KJEGuiDefnPopup:after {
+    content:"";
+    position:absolute;
+    top:-8px; /* value = - border-top-width - border-bottom-width */
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    left:38px;
+    right:auto; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width:0 11px 11px;
+    border-style:solid;
+    border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+div.KJEGuiDefnPopupRight:before {
+    right:39px;
+    left:auto; /* controls horizontal position */
+}
+
+div.KJEGuiDefnPopupRight:after {
+    right:38px;
+    left:auto; /* value = (:before left) + (:before border-left) - (:after border-left) */
+}
+
+div.KJEToggleClose {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xOdTWsmQAAACzSURBVDhP1ZLRDYMwDAW9EgMxTpZhl+7iDUyd9hnHOE1Q6UdPehJJnMMW0E8QkVti6IKZv4oJs0MERehglGGxx+9nL0emKGUzuxdnaex1I1AW0k2h9ZB+ZEqGzEibdh0rJEuRB29i69lOPa2Mq4BnpXHcKPMT9KTH+fMr6wPoycDr0lmKOl+byjJ0fzj++3Iqw19Qx3F4qdb7O80lDQquxugedIj1iKGL2OXVnIR35B8g2gHTPGtYkYEIggAAAABJRU5ErkJggg==');
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+    margin-right: 0;
+
+}
+
+div.KJEToggleOpen {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xOdTWsmQAAACxSURBVDhP1ZHLEYMwDAXVEgVRjpuhl/SiDpSIQeJZlsEQcsjOvINke/2j/0BEHomjBTN/lUaIOSPOtzjZbnfibIXQVOTF/Cn3QdwIYV5k1jXr8iBUbDCTItpHGc1LPREXZlIc78ls3jrX3szoSTW9k+3j9bM4Uaq9w2sieAKklg7KFPvBKFTKtElGZYoJT6UjslFKaT+gl7RpQbCPt4pJmxaTouwojhaZ8Eoa4RP5AURvGgdrWJfXBpYAAAAASUVORK5CYII=');
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+table.KJEToggleTable {
+    width:100%;
+    border-style:none;
+}
+
+table.KJEToggleTable td{
+    border:0;
+}
+
+
+.KJEToggleTitle, h2.KJEToggleTitle{
+    font-size:1em;
+    font-weight:bold;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    border-style:none;
+}
+
+div.KJEToggleTitle100Cell {
+    width: 100%;
+    text-align: center;
+}
+
+h2.KJEToggleTitle {
+    font-size:1.1em;
+    display:inline-block;
+    margin: 0;
+    width:100%;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+td.KJEToggleTitle99Cell {
+    width:99%;
+    vertical-align:top;
+}
+
+td.KJEToggleTitle49Cell {
+    width:49%;
+    vertical-align:top;
+}
+
+td.KJEToggleTitle49Cell {
+    width:100%;
+    vertical-align:top;
+}
+
+.KJEToggleIcon {
+    padding-top: 0;
+    vertical-align: top;
+    color: #111111;
+    outline: none;
+    cursor:pointer;
+    white-space:nowrap;
+    width:35px;
+    border-style:none;
+}
+
+.KJEToggleSubTitle {
+    font-size:0.9em;
+    font-weight:bold;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.KJEGraphIcon {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-image: none;
+}
+.KJEInputIcon {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-image: none;
+}
+
+.KJEInputDiv {
+    padding-top: 5px;
+    display: block;
+    overflow: visible;
+    width: auto;
+    border-color: rgb(102,102,102);
+    height: auto;
+}
+
+.KJEDropper{
+    border-top: 1px solid;
+    padding: 5px;
+    border-color: rgb(102,102,102);
+    height: auto;
+}
+
+.KJEGraphDropper, div.KJEGraphDropper td.KJEGraphTitle, .KJEDropper {
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease;
+}
+
+.KJEDropper:active {
+    background-color: #FFFFFF;
+}
+
+.KJEDropper:hover {
+    background-color: #FFFFFF;
+}
+
+.KJEGraphContainer {
+    overflow: hidden;
+}
+
+.KJEGraph {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow: hidden;
+}
+
+.KJEGraphTitle, h2.KJEGraphTitle {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-style:none;
+    font-size:1.1em;
+    font-weight:bold;
+    display:inline-block;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+.KJEGraphDropper {
+    border-top: 1px solid;
+    border-color: rgb(102,102,102);
+    height: auto;
+    padding: 5px;
+}
+
+.KJEGraphDropper:active {
+    background-color: #FFFFFF;
+}
+
+.KJEGraphDropper:hover {
+    background-color: #FFFFFF;
+}
+
+.KJEDropperReport {
+    border: 0;
+    padding: 5px;
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease;
+    height: auto;
+}
+
+.KJEDropperReport:active {
+    background-color: #FFFFFF;
+}
+
+.KJEDropperReport:hover {
+    background-color: #FFFFFF;
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease;
+}
+
+div.KJEDroppee {
+    height: auto;
+    padding:  10px 0 0 0;
+}
+
+.KJEReportTableDiv {
+    box-sizing: border-box;
+    margin: 20px 0;
+    border: 1px black solid;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 2px;
+    width:100%;
+    box-shadow: 5px 5px 10px #DDDDDD;
+    -webkit-box-shadow: 5px 5px 10px #DDDDDD;
+    -moz-box-shadow: 5px 5px 10px #DDDDDD;
+}
+
+.KJEInput .KJEReportTableDiv {
+    width: 100%;
+}
+
+.KJEDefinitions .KJEReportTableDiv {
+    width: 100%;
+}
+
+.KJEDefinitionPopup .KJEReportTableDiv {
+    width: 100%;
+}
+
+.KJECenter {
+    text-align:center;
+}
+
+.KJEReportHeader {
+    font-size:1.2em;
+    font-weight:bold;
+    line-height:1.4em;
+}
+
+.KJEReportTitleBlock {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.KJEReportTitle {
+    font-size:1.3em;
+    font-weight:bold;
+    margin: 0;
+    padding: 0;
+}
+
+div.KJEReportExtraClientBlock {
+    width: 100%;
+    text-align: center;
+}
+
+table.KJEReportTable, table.KJECalcTable {
+    font-size: 0.9em;
+    background-color: #cccccc;
+    border-spacing: 0;
+    border: 1px;
+    border-collapse: collapse;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+table.KJECalcTable {
+    background-color: inherit;
+}
+
+table.KJEReportTable tr.KJEHeaderRow, table.KJECalcTable tr.KJEHeaderRow {
+    background-color: #cccccc;
+    text-align: center;
+    border: none;
+}
+
+table.KJEReportTable tr.KJEFooterRow, table.KJECalcTable tr.KJEFooterRow {
+    background-color: #cccccc;
+    text-align: right;
+    border: none;
+}
+
+caption.KJEHeaderRow, caption.KJEHeaderRow {
+    background-color: #cccccc;
+}
+
+table.KJECalcTable tr.KJEHeaderRow,
+table.KJECalcTable tr.KJEFooterRow {
+    background-color: inherit
+}
+
+table.KJEReportTable tr.KJEHeaderRow:hover, table.KJECalcTable tr.KJEHeaderRow:hover,
+table.KJEReportTable tr.KJEFooterRow:hover, table.KJECalcTable tr.KJEFooterRow:hover{
+    background-color: #246c9d;
+    color: #ffffff;
+}
+
+table.KJEReportTable tr.KJEEvenRow {
+    background-color: #eeeeee;
+    text-align: right;
+}
+
+table.KJECalcTable tr.KJEEvenRow{
+    text-align: right;
+}
+
+table.KJEReportTable tr.KJEEvenRow:hover, table.KJECalcTable tr.KJEEvenRow:hover{
+    background-color: #246c9d;
+    color: #ffffff;
+}
+
+table.KJEReportTable tr.KJEOddRow {
+    background-color: #ffffff;
+    text-align: right;
+}
+table.KJECalcTable tr.KJEOddRow {
+    text-align: right;
+}
+
+
+table.KJEReportTable tr.KJEOddRow:hover, table.KJECalcTable tr.KJEOddRow:hover{
+    background-color: #246c9d;
+    color: #ffffff;
+}
+
+h2.KJESubHeading {
+    font-size:1.05em;
+    padding: 0;
+    margin: 0;
+}
+
+table.KJEReportTable .KJEHeading,  table.KJECalcTable .KJEHeading{
+    font-size:1.05em;
+    font-weight:bold;
+    line-height:1.2em;
+    padding: 10px 8px;
+}
+
+table.KJEReportTable .KJEHeadingUnderline,  table.KJECalcTable .KJEHeadingUnderline {
+    text-decoration: underline;
+}
+table.KJEReportTable .KJEHeadingRight,  table.KJECalcTable .KJEHeadingRight{
+    text-align: right;
+}
+
+table.KJEReportTable td.KJECell,table.KJEReportTable th.KJECell, table.KJECalcTable td.KJECell{
+    padding:10px 8px;
+    vertical-align:text-top;
+    border: none;
+}
+
+table.KJEReportTable td.KJELabel, table.KJEReportTable th.KJELabel, table.KJECalcTable td.KJELabel, table.KJECalcTable th.KJELabel,
+table.KJECalcTable th.KJEHeading, table.KJEReportTable th.KJEHeading {
+    padding:10px 8px;
+    font-weight:bold;
+    vertical-align:text-top;
+    border: none;
+    display: table-cell;
+}
+
+table.KJEIndexTable th.KJELabel{
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+table.KJEReportTable th.KJELabel, table.KJECalcTable th.KJELabel{
+    text-align: right;
+}
+
+table.KJEReportTable td.KJELabelPad, th.KJELabelPad, table.KJECalcTable td.KJELabelPad {
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    border: none;
+}
+
+table.KJEReportTable td.KJECellStrong,table.KJEReportTable th.KJECellStrong, table.KJECalcTable td.KJECellStrong, table.KJECalcTable th.KJECellStrong{
+    padding:10px 8px;
+    font-weight:bold;
+    vertical-align:text-top;
+    border: none;
+    font-weight:bold;
+}
+
+table.KJEReportTable th.KJEHeading:hover, table.KJECalcTable th.KJEHeading:hover,
+table.KJEReportTable td.KJECell:hover, table.KJECalcTable td.KJECell:hover{
+    color: #ffffff;
+    background-color: #000055;
+}
+
+table.KJEReportTable .KJELabel:hover, table.KJECalcTable .KJELabel:hover{
+    color: #ffffff;
+    background-color: #000055;
+}
+
+table.KJEReportTable td.KJECellStrong:hover, table.KJECalcTable td.KJECellStrong:hover{
+    color: #ffffff;
+    background-color: #000055;
+}
+
+table.KJEReportTable td.KJECellSpecial:hover, table.KJECalcTable td.KJECellSpecial:hover {
+    color: #ffffff;
+    background-color: #000055;
+}
+
+table.KJEReportTable a:hover {
+    color: #ffffff;
+}
+
+table.KJEReportTable td.KJECellSpecial, table.KJEReportTable th.KJECellSpecial, table.KJECalcTable td.KJECellSpecial, table.KJECalcTable th.KJECellSpecial{
+    color: red;
+    padding-right:10px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+table.KJEReportTable td.KJECellBorder, table.KJEReportTable th.KJECellBorder, table.KJECalcTable th.KJECellBorder, table.KJECalcTable td.KJECellBorder {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-spacing: 1px;
+    border-color: #000000;
+}
+
+table.KJEReportTable td.KJECellBorderBottom, table.KJEReportTable th.KJECellBorderBottom, table.KJECalcTable th.KJECellBorderBottom, table.KJECalcTable td.KJECellBorderBottom {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+}
+
+
+.KJELeft, table.KJEReportTable th.KJELeftPad, table.KJECalcTable th.KJELeftPad  {
+    text-align: left;
+}
+
+.KJELeftPad, table.KJEReportTable th.KJELeftPad, table.KJECalcTable th.KJELeftPad  {
+    text-align: left;
+    padding-left: 10px;
+}
+.KJECenter, table.KJEReportTable th.KJECenter, table.KJECalcTable th.KJECenter {
+    text-align: center;
+}
+
+.KJERight {
+    text-align: right;
+}
+
+.KJERightBold, table.KJEReportTable th.KJERightBold, table.KJECalcTable th.KJERightBold  {
+    text-align:right;
+    font-weight: bold;
+}
+
+.KJECenterBold, table.KJEReportTable th.KJECenterBold, table.KJECalcTable th.KJECenterBold   {
+    text-align:center;
+    font-weight: bold;
+}
+
+.KJELeftBold, table.KJEReportTable th.KJELeftBold, table.KJECalcTable th.KJELeftBold  {
+    text-align:left;
+    font-weight: bold;
+}
+
+table.KJEReportTable td.KJECell10, th.KJECell10, table.KJECalcTable td.KJECell10 {
+    width: 10%;
+}
+table.KJEReportTable td.KJECell15, th.KJECell15, table.KJECalcTable td.KJECell15 {
+    width: 15%;
+}
+
+table.KJEReportTable td.KJECell225, th.KJECell225, table.KJECalcTable td.KJECell225 {
+    width: 22.5%;
+}
+
+table.KJEReportTable td.KJECell20, th.KJECell20, table.KJECalcTable td.KJECell20 {
+    width: 20%;
+}
+table.KJEReportTable td.KJECell25, th.KJECell25, table.KJECalcTable td.KJECell25 {
+    width: 25%;
+}
+table.KJEReportTable td.KJECell30, th.KJECell30, table.KJECalcTable td.KJECell30 {
+    width: 30%;
+}
+table.KJEReportTable td.KJECell35, th.KJECell35, table.KJECalcTable td.KJECell35 {
+    width: 35%;
+}
+table.KJEReportTable td.KJECell40, th.KJECell40, table.KJECalcTable td.KJECell40 {
+    width: 40%;
+}
+table.KJEReportTable td.KJECell50, th.KJECell50, table.KJECalcTable td.KJECell50 {
+    width: 50%;
+}
+table.KJEReportTable td.KJECell60, th.KJECell60, table.KJECalcTable td.KJECell60 {
+    width: 60%;
+}
+table.KJEReportTable td.KJECell70, th.KJECell70, table.KJECalcTable td.KJECell70 {
+    width: 70%;
+}
+table.KJEReportTable td.KJECell85, th.KJECell85, table.KJECalcTable td.KJECell85 {
+    width: 85%;
+}
+table.KJEReportTable td.KJECellNB, th.KJECellNB, table.KJECalcTable td.KJECellNB {
+    border-width: 0;
+}
+
+div.KJEReportTableSidebySide {
+  width: 100%;
+  clear: both;
+  display: block;
+}
+div.KJEReportTableSidebySide::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.KJEReportTableDivLeft, div.KJEReportTableDivRight {
+    display: inline-block;
+    float: right;
+    width: 49%; /* three containers (use 25% for four, and 50% for two, etc) */
+    display: table-cell;
+}
+
+div.KJEReportTableDivLeft {
+    float: left;
+}
+
+div.KJEReportTableDivLeft::after, div.KJEReportTableDivRight::after {
+    content: "";
+    clear: both;
+    display: table-cell;
+}
+
+th.KJEColumnHeader {
+    text-align: center;
+}
+
+
+/*
+Rows and Cells used in the schedule table
+*/
+
+.KJEScheduleHeader {
+    font-size:1.2em;
+    font-weight:bold;
+    line-height:1.4em;
+    page-break-after:avoid;
+}
+table.KJEScheduleTable {
+    font-size: 0.9em;
+    background-color: #cccccc;
+    border-spacing: 0;
+    border-style: none;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+table.KJEScheduleTable tr.KJEScheduleHeaderRow {
+    background-color: #cccccc;
+    border-color: #cccccc;
+    text-align: right;
+    border: none;
+}
+
+table.KJEScheduleTable th {
+    background-color: inherit;
+}
+
+table.KJEScheduleTable tbody.KJEScheduleTBody th {
+    background-color: inherit;
+}
+
+table.KJEScheduleTable tr.KJEScheduleEvenRow {
+    background-color: #eeeeee;
+    text-align: right;
+    border: none;
+}
+
+table.KJEScheduleTable tr.KJEScheduleOddRow {
+    background-color: #ffffff;
+    text-align: right;
+}
+table.KJEScheduleTable tr.KJEScheduleOddRow:hover,
+table.KJEScheduleTable tr.KJEScheduleEvenRow:hover,
+table.KJEScheduleTable tr.KJEScheduleHeaderRow:hover,
+table.KJEScheduleTable tr.KJEScheduleFooterRow:hover
+{
+    background-color: #246c9d;
+    color: #ffffff;
+}
+
+table.KJEScheduleTable th.KJEScheduleHeading {
+    padding: 10px 8px;
+    border: none;
+}
+
+.KJEMinHeight2 {
+    height:30px;
+    padding: 10px;
+}
+
+table.KJEScheduleTable td.KJEScheduleCell,
+table.KJEScheduleTable th.KJEScheduleCell,
+table.KJEScheduleTable td.KJEScheduleCellSpecial,
+table.KJEScheduleTable td.KJEScheduleCellStrong {
+    padding: 10px 8px;
+    vertical-align: text-top;
+    border: none;
+}
+
+table.KJEScheduleTable td.KJEScheduleCell:hover,
+table.KJEScheduleTable thead.KJEScheduleTHeader th.KJEScheduleHeading:hover,
+table.KJEScheduleTable td.KJEScheduleCellSpecial:hover,
+table.KJEScheduleTable td.KJEScheduleCellStrong:hover {
+    color: #ffffff;
+    background-color: #000055;
+}
+
+table.KJEScheduleTable td.KJEScheduleCellStrong {
+    font-weight: bold;
+}
+
+table.KJEScheduleTable td.KJEScheduleCellSpecial {
+    color: red;
+}
+
+table.KJEScheduleTable td.KJECellBorder, table.KJEScheduleTable th.KJECellBorder {
+    border: 0 #000000 solid;
+    border-width: 0 1px 0 0;
+}
+
+table.KJEScheduleTable td.KJECellBorderBottom, table.KJEScheduleTable th.KJECellBorderBottom {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+}
+
+thead.KJEScheduleTHeader {
+    display:table-header-group;
+}
+
+#KJESplash{
+    right:0;
+    left:0;
+    margin-top:85px;
+    padding-top:42px;
+    position: absolute;
+    display:inline-block;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(data:image/x-png;base64,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);
+}
+
+.KJEWidthContraint {
+    max-width: 900px;
+    text-align:left;
+    margin: auto;
+    background: #ffffff;
+    padding:15px;
+}
+
+.KJEWrapper {
+    background: #cccccc;
+    padding: 0;
+    margin:0;
+}
+
+.KJEBreakHeader {display:none;}
+
+div.KJELogo {
+    text-align: center;
+    width: 100%;
+}
+
+.KJEWidthConstraint {
+    max-width: 900px;
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    padding:15px;
+}
+
+.KJEWrapper {
+    background: #ffffff;
+    padding: 0;
+    margin:0;
+}
+
+@media screen and (max-width:640px){
+
+    .KJECommandButton, .KJEMoreButton {
+        width:130px;
+        font-size: 1.0em;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    /*#KJEScrollSticky, #KJEFixed, #KJECommandButtons, #KJEReportButtons {*/
+    #KJEFixed, #KJECommandButtons, #KJEReportButtons, #KJEMoreButtons {
+        width: 285px;
+    }
+
+    div.KJETitle {
+        background-image: none;
+    }
+
+    .KJEWidthConstraint {
+        padding:10px !important;
+    }
+
+    .KJELogo {
+        max-width: 100%
+    }
+
+    .KJEReport {
+        padding: 0;
+    }
+
+    div.KJEReportTableDiv {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding: 4px;
+        box-shadow: 0 0 0 #DDDDDD;
+        -webkit-box-shadow: 0 0 0 #DDDDDD;
+        -moz-box-shadow: 0 0 0 #DDDDDD;
+        width: 100%;
+    }
+    table.KJEReportTable, table.KJECalcTable {
+        font-size: 0.85em;
+    }
+
+    table.KJEReportTableShrink {
+        line-height: normal;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        padding: 0;
+        width:100%;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
+
+    table.KJEReportTableShrink td  {
+        padding: 0;
+        margin: 0;
+        font-size: .8em;
+    }
+
+    table.KJEReportTableShrink th{
+        font-size: .85em;
+    }
+
+    table.KJEScheduleTable {
+        font-size: 0.75em;
+    }
+
+    table.KJEScheduleTable th.KJEScheduleHeading {
+        padding-right:5px;
+    }
+
+    table.KJEReportTable td.KJELabel, th.KJELabel, table.KJECalcTable td.KJELabel{
+        padding-right:5px;
+    }
+
+    table.KJEReportTable td.KJELabelPad, th.KJELabelPad, table.KJECalcTable td.KJELabelPad {
+        padding-right:5px;
+        padding-left:2px;
+    }
+
+    table.KJEReportTable td.KJECellStrong, table.KJEReportTable th.KJECellStrong, table.KJECalcTable td.KJECellStrong, table.KJECalcTable th.KJECellStrong{
+        padding-right:5px;
+        padding-left:2px;
+    }
+
+    table.KJEReportTable td.KJECell, table.KJEReportTable th.KJECell, table.KJECalcTable td.KJECell, table.KJECalcTable th.KJECell{
+        padding-right:5px;
+        padding-left:2px;
+    }
+
+
+    #KJEDefinitionsDL {
+        padding-left:5px;
+    }
+
+    #KJEDefinitionsDL dt.KJEDefinition {
+        font-size: 0.9em;
+    }
+
+    #KJEDefinitionsDL dd.KJEDefinition {
+        padding: 5px 5px 20px 5px;
+    }
+
+    #KJEDefinitionsDL p.KJEDefinition {
+      font-size: 0.90em;
+      line-height: 1.5em;
+    }
+
+    #KJEDefinitionsDL td, #KJEDefinitionsDL li, #KJEDefinitionsDL th {
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+
+    #KJEDefinitionsDL ul, #KJEDefinitionsDL ol {
+        font-size: 1em;
+    }
+
+    div.KJEReportTableDivLeft, div.KJEReportTableDivRight {
+        display: block;
+        float: none;
+        width: 100%; /* three containers (use 25% for four, and 50% for two, etc) */
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    table.KJEScheduleTable {
+        font-size: 0.65em;
+    }
+}
+@media screen and (max-width:500px) {
+    table.KJEScheduleTable {
+        font-size: 0.5em;
+    }
+
+}
+
+@media screen and (max-width:400px){
+
+    div.KJECalculatorTable {
+        padding: 4px 0 0 0;
+        box-shadow: 0 0 0;
+        -webkit-box-shadow: 0 0 0;
+        border-width: 1px;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-box-shadow: 0 0 0;
+    }
+
+    div.KJEReportTableDiv {
+        margin-right: 0;
+        margin-left: 0;
+        border-width: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    table.KJEReportTableShrink td  {
+        padding: 0;
+        margin: 0;
+        font-size: .75em;
+    }
+
+    table.KJEReportTable td.KJECell, table.KJEReportTable th.KJECell, table.KJECalcTable td.KJECell, table.KJECalcTable th.KJECell{
+        padding-right:2px;
+        padding-left:2px;
+    }
+
+#KJEReport table.KJEReportTableShrink td, #KJEDefinitionsDL table.KJEReportTableShrink td {
+    font-size: 0.75em;
+    }
+
+#KJEDefinitionsDL table.KJEReportTableShrink th, #KJEReport table.KJEReportTableShrink th {
+        font-size: 0.65em;
+    }
+
+    table.KJEScheduleTable {
+        display:none;
+    }
+
+    p.KJEScheduleNote {
+        display:inline;
+    }
+
+    .KJEWidthConstraint {
+        padding: 3px !important;
+    }
+}
+
+@media print {
+    .KJENoPrint {
+        display: none;
+    }
+
+    #KJECalculatorScreenSize {
+        page-break-before: avoid;
+    }
+
+    .KJEWrapper {
+        background: #ffffff;
+        border: 0 solid #ffffff;
+    }
+
+    .KJECalculatorTable {
+        border: 2px solid #666666;
+        box-shadow: 0 0 0;
+        -webkit-box-shadow: 0 0 0;
+        -moz-box-shadow: 0 0 0;
+    }
+
+    .KJECalculator {
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+
+    .KJECalculator .KJEMain {
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+
+
+    .KJECalculatorReportTable {
+        display: none;
+    }
+
+    .KJEToggleIcon {
+        display: none;
+    }
+
+    .KJEGraphIcon {
+        display: none;
+    }
+
+    .KJEInputIcon {
+        display: none;
+    }
+
+    .KJEDefinitions {
+        display: block;
+    }
+
+    .KJEDefinitionsHeader {
+        page-break-after: avoid;
+    }
+
+    .KJEDefinitions dl {
+        page-break-before: avoid;
+    }
+
+    .KJEDefinitions dt {
+        page-break-after: avoid;
+    }
+
+    .KJEDefinitions dd {
+        page-break-before:avoid;
+    }
+
+    button.KJECommandButton, button.KJEMoreButton {
+        display: none;
+    }
+
+    #KJEScrollSticky, #KJEFixed, #KJECommandButtons, #KJEReportButtons, #KJEMoreButtons1, #KJEMoreButtons2, #KJEMoreButtons3 {
+        display: none;
+    }
+
+    .KJEDropperReport {
+        border-top: 0;
+    }
+table.KJEScheduleTable {
+    border: 0;
+    background: #fff;
+}
+    table.KJEScheduleTable tr.KJEScheduleHeaderRow, table.KJEScheduleTable, table.KJEScheduleTable tr.KJEScheduleEvenRow, table.KJEScheduleTable tr.KJEScheduleOddRow   {
+        border: 0;
+    }
+
+    table.KJEScheduleTable td.KJEScheduleCell,table.KJEScheduleTable td.KJEScheduleCellStrong, table.KJEScheduleTable td.KJEScheduleCellSpecial  {
+        border-collapse: collapse;
+        border: 1px black solid;
+        border-top-width: 0;
+        border-spacing: 0;
+    }
+
+     table.KJEScheduleTable th.KJEScheduleHeading,
+     table.KJEScheduleTable th.KJEScheduleCell,
+     table.KJEScheduleTable th.KJEScheduleCellStrong  {
+        border-collapse: collapse;
+        border: 1px black solid;
+        border-bottom-width: 1px;
+        border-spacing: 0;
+    }
+
+    .KJEBreakHeader {
+        display:block;
+        page-break-before:always;
+    }
+
+    div.KJEReportTableDiv {
+        border: 0 black solid;
+        -webkit-border-radius:0;
+        -moz-border-radius:0;
+        border-radius: 0;
+        width:100%;
+        display: inline-block;
+        padding: 2px;
+        box-shadow: 0 0 0;
+        -webkit-box-shadow: 0 0 0;
+        -moz-box-shadow: 0 0 0;
+    }
+
+    table.KJEReportTable {
+        border: 1px black solid;
+        border-collapse: collapse;
+        border-spacing: 1px;
+    }
+
+
+
+    table.KJEReportTable td.KJECell, table.KJEReportTable td.KJELabel {
+        border: 1px black solid;
+        border-spacing: 1px;
+    }
+
+    table.KJEReportTable td.KJECellStrong {
+        border: 1px black solid;
+        border-spacing: 1px;
+    }
+
+    table.KJEReportTable td.KJECellSpecial {
+        border: 1px black solid;
+        border-spacing: 1px;
+    }
+
+    caption.KJEHeaderRow, caption.KJEHeaderRow {
+        border: 1px black solid;
+        border-spacing: 1px;
+        }
+
+    table.KJEReportTable td.KJECellBorder, table.KJEReportTable th.KJECellBorder {
+        border-width: 1px;
+    }
+
+    table.KJEReportTable td.KJECellNB {
+        border-width: 0;
+    }
+
+    table.KJEReportTableNB {
+        border-width: 0;
+    }
+}
+
+span.KJEAccessible {
+    position: absolute !important;
+    top: -1000px !important;
+    left: -1000px !important;
+    height: 1px !important;
+    width: 1px !important;
+    text-align: left !important;
+    overflow: hidden !important;
+}
+
+figcaption.KJEAccessible {
+    font-size:0;
+    width:0;
+    height:1px;
+    position:absolute;
+    overflow:hidden;
+    z-index:-1000;
+}
+
+span.KJEAccessibleInLine {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.KJEInputContainer input.KJEInputErrorField {
+    border-color: #CA3B53;
+}
+
+span.KJERangeError {
+    display: block;
+    border: 1px solid black;
+    z-index: 100;
+    background:darkgray;
+    overflow: auto;
+}
+fieldset.KJEAccessibleFieldSet {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+}
+legend.KJEAccessibleFieldSetLegend {
+    font-size:0;
+    width:0;
+    height:1px;
+    position:absolute;
+    overflow:hidden;
+    z-index:-1000;
+}
+
+a.KJEAccessibleSkip {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+}
+
+a.KJEAccessibleSkip:active,
+a.KJEAccessibleSkip:focus,
+a.KJEAccessibleSkip:hover {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+
+.KJEPopupLink {
+    z-index: 2;
+    position: relative;
+}
+
+
+#KJEMenuWindow {
+    left: auto;
+    right: 8px;
+    top: 50px;
+    color:#000000;
+    background:#ffffff;
+    border:1px solid #5D60C6;
+    position: absolute;
+    display: none;
+    z-index: 99;
+    padding:9px;
+    margin:1em 0 3em;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px #333333;
+    -webkit-box-shadow: 3px 3px 3px #333333;
+    -moz-box-shadow: 3px 3px 3px #333333;
+}
+
+#KJEMenuWindow:before {
+    content:"";
+    position:absolute;
+    top:-10px; /* value = - border-top-width - border-bottom-width */
+    left:auto;
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    right:10px; /* controls horizontal position */
+    border-width:0 10px 10px;
+    border-style:solid;
+    border-color:#5D60C6 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+
+/* creates the smaller  triangle */
+#KJEMenuWindow:after {
+    content:"";
+    position:absolute;
+    top:-8px; /* value = - border-top-width - border-bottom-width */
+    bottom:auto; /* value = - border-top-width - border-bottom-width */
+    right:9px;
+    left:auto; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width:0 11px 11px;
+    border-style:solid;
+    border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block;
+    width:0;
+}
+div.KJEMenuNewRow {
+    text-align:center;
+}
+
+input.KJEMenuInputItem {
+    display: inline-block;
+    width: 95%;
+}
+
+input.KJEMenuButton[type=button] {
+    font: bold 0.9em Arial, Helvetica, sans-serif;
+    position: relative;
+    color:#ffffff;
+    background:#333333;
+
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    white-space:nowrap;
+    width:60px;
+    border: 2px solid #bbbbbb;
+
+}
+
+input.KJEMenuButton[type=button]:active {
+    top: 2px;
+    left: 1px;
+}
+
+input.KJEMenuButtonWide[type=button] {
+    width:100%;
+}
+
+div.KJEMenuLabel {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 0;
+    width: 182px;
+    text-align: left;
+}
+
+div.KJEMenuSaveRow, div.KJEMenuNormalRow {
+    padding: 0;
+    text-align:center;
+    border: 0;
+    margin: 0;
+    background: transparent;
+}
+
+#KJESavedRow1, #KJESavedRow2, #KJESavedRow3, #KJESavedRow4, #KJESavedRow5, #KJESavedRow6, #KJESavedRow7, #KJESavedRow8, #KJESavedRow9, #KJESavedRow10 {
+   display: none;
+}
+
+div.KJEMenuGroupRow {
+    border: 1px solid #aaa;
+    padding: 5px;
+    text-align:center;
+    text-decoration: none;
+    vertical-align: bottom;
+    margin: 0;
+    background:#eeeeee;
+}
+
+div.KJEMenuSelectedRow {
+    background: #2fa22f;
+}
+
+
+.KJEInputContainer input[type=range].KJERange {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+    margin: 13px 0 0 0;
+    border: none;
+}
+
+.KJEInputContainer input[type=range]::-ms-tooltip {
+    display: none;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .KJEInputContainer input[type=range].KJERange {
+        -webkit-appearance: none;
+        width: 100%;
+        background: transparent;
+        margin: -4px;
+        box-sizing: content-box;
+    }
+}
+
+.KJEInputContainer input[type=range]:focus {
+    outline: none;
+}
+.KJEInputContainer input[type=range]::-webkit-slider-runnable-track {
+    border-width: 2px 0 0 0;
+    border-style: dotted;
+    border-color: rgb(102, 102, 102);
+    height:5px;
+    background: transparent;
+}
+.KJEInputContainer input[type=range]:active::-webkit-slider-runnable-track {
+    border-style: solid;
+}
+
+.KJEInputContainer input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height:18px;
+    width:18px;
+    border-radius: 0px;
+    margin-top: -14px;
+    border-top: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 18px solid rgba(0,0,212, 0.6);
+    box-shadow: 0 2px rgba(0,0,212, 0.3);
+    cursor: pointer;
+    background: transparent;
+
+}
+.KJEInputContainer input[type=range]:active::-webkit-slider-thumb {
+    border-bottom: 18px solid rgba(0,0,212, 1);
+    box-shadow: 0 2px rgba(0,0,212, 0.3);
+    background: transparent;
+}
+
+
+.KJEInputContainer input[type=range]::-moz-range-track {
+    border-width: 2px 0 0 0;
+    border-style: dotted;
+    border-color: rgb(102, 102, 102);
+    height: 0;
+    padding: 0 0 10px 0;
+    background: transparent;
+    overflow: visible;
+}
+.KJEInputContainer input[type=range]:active::-moz-range-track{
+    border-style: solid;
+}
+
+.KJEInputContainer input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border-radius: 0;
+    height:1px;
+    width:1px;
+    margin-top: 14px;
+    border-top: 0px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 18px solid rgba(0,0,212, 0.6);
+    -moz-box-shadow: 0 2px rgba(0,0,212, 0.3);
+    box-shadow: 0 2px rgba(0,0,212, 0.3);
+    cursor: pointer;
+    background: transparent;
+}
+
+.KJEInputContainer input[type=range]:active::-moz-range-thumb {
+    border-bottom: 18px solid rgba(0,0,212, 1);
+    -mox-box-shadow: 0 2px rgba(0,0,212, 0.6);
+    box-shadow: 0 2px rgba(0,0,212, 0.6);
+}
+
+.KJEInputContainer input[type=range]::-ms-track {
+    height:30px;
+    background: transparent;
+    color: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+}
+
+.KJEInputContainer input[type=range]::-ms-fill-lower {
+    border-width: 2px 0 0 0;
+    border-style: dotted;
+    border-color: rgb(102, 102, 102);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+.KJEInputContainer input[type=range]:active::-ms-fill-lower{
+    border-style: solid;
+}
+.KJEInputContainer input[type=range]::-ms-fill-upper {
+    border-width: 2px 0 0 0;
+    border-style: dotted;
+    border-color: rgb(102, 102, 102);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+.KJEInputContainer input[type=range]:active::-ms-fill-upper{
+    border-style: solid;
+}
+
+.KJEInputContainer input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border-radius: 0;
+    height:1px;
+    width:1px;
+    margin-top: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 18px solid rgba(0,0,212, 0.6);
+    border-top: 0;
+    box-shadow: 0 2px 0 0 rgba(0,0,212, 0.3);
+    cursor: pointer;
+    background: transparent;
+}
+
+.KJEInputContainer input[type=range]:active::-ms-thumb {
+    border-bottom: 18px solid rgba(0,0,212, 1);
+    box-shadow: 0 2px 0 0 rgba(0,0,212, 0.6);
+}
+
+html[KJE-useragent*='MSIE 10.0'] .KJEInputContainer input[type=range]::-ms-thumb {
+    margin-top: -23px;
+}
+
+table.KJEIndexTable tr:hover {
+    color: #ffffff;
+}
+
+table.KJEIndexTable tr a:hover {
+    color: #ffffff;
+}
+
+table.KJEIndexTable  {
+    padding:20px;
+    font-size: 1em;
+}
+
+table.KJEIndexTable th.KJELabel a {
+    display: block;
+    height: 100%;
+    padding: 10px 10px 200px 10px;
+    margin-bottom: -190px;
+    margin-left: 0;
+}
+
+table.KJEIndexTable th.KJELabel {
+    overflow:hidden;
+    padding: 0;
+}
+
+table.KJEIndexTable tr:hover a {
+    color: #ffffff;
+}
+
+table.KJEReportTable tr.KJEFooterRow a {
+    color:inherit;
+    text-decoration: underline;
+}
+
+
+/* incrementer */
+div.KJEIncrementer {
+}
+
+div.KJEIncrementControl {
+    display: inline-block;
+    position: relative;
+    color: #0053A3;
+    height: 28px;
+    width: 28px;
+    margin-left: 4px;
+    margin-right: 4px;
+
+}
+
+.KJEIncrementMinus, .KJEIncrementPlus {
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: 2px solid #0053A3;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #FFFFFF;
+    font-size: 2em;
+}
+.KJEIncrementMinus:hover, .KJEIncrementPlus:hover {
+    background: #5D60C6;
+    border-color: #5D60C6;
+}
+
+.KJEIncrementPlus:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "+"; /* use the hex value here... */
+    color: #FFFFFF;
+    line-height: normal;
+    text-align: center;
+}
+
+.KJEIncrementMinus:after {
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "-"; /* use the hex value here... */
+    color: #FFFFFF;
+    line-height: normal;
+    text-align: center;
+    margin-top: -5px;
+}
+
+div.KJEIncrementControl:active {
+    position: relative;
+    top:2px;
+}
+
+img.KJEMiddle {
+  vertical-align: middle;
+}
+
+
+/*Proofing CSS*/
+
