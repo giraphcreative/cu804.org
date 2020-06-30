@@ -16,33 +16,30 @@ function the_showcase() {
 			if ( !empty( $slide["image"] ) ) {
 
 				// store the title and subtitle
-				$title = ( isset( $slide["title"] ) ? $slide["title"] : '' );
-				$subtitle = ( isset( $slide["subtitle"] ) ? $slide["subtitle"] : '' );
+				$content = ( isset( $slide["content"] ) ? $slide["content"] : '' );
 				$link = ( isset( $slide["link"] ) ? $slide["link"] : '' );
-				$alt = ( isset( $slide['alt-text'] ) ? $slide["alt-text"] : "Link to " . $link );
-
-				// check if it's an image or video
-				if ( p_is_image( $slide["image"] ) ) {
-					// it's an image, so resize it and generate an img tag.
-					$image = '<img src="' . $slide["image"] . '" alt="' . $alt . '">';
-				} else {
-					// it's a video, so oEmbed that stuffs, yo
-					$image = apply_filter( 'the_content', $slide["image"] );
-				}
+				$image = $slide['image'];
 
 				?>
-			<div class="slide<?php print ( $key == 0 ? ' visible' : '' ); ?>">
+			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>" style="background-image: url(<?php print $slide["image"]; ?>);">
 				<?php if ( !empty( $link ) ) { ?><a href="<?php print $link ?>" class="<?php print ( stristr( $link, 'vimeo' ) || stristr( $link, 'youtube' ) || stristr( $link, 'google.com/maps' ) ? 'lightbox-iframe' : '' ) ?>"><?php } ?>
-				<?php print $image; ?>
-				<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 				
-				<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
-				<div class="slide-content">
-					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
+				<?php if ( !empty( $content ) ) { ?>
+				<div class="wrap">
+					<div class="slide-content">
+					<?php 
+					if ( !empty( $content ) ) { 
+						print apply_filters( 'the_content', $content );
+					}
+					?>
+					</div>
 				</div>
 				<?php } ?>
+
+				<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 			</div>
 				<?php
+
 				$count++;
 			}
 		}
@@ -93,17 +90,10 @@ function showcase_metabox( $meta_boxes ) {
     ) );
 
     $showcase_metabox->add_group_field( $showcase_metabox_group, array(
-        'name' => 'Title (optional)',
-        'desc' => 'Set a title to show in the middle of this slide (optional)',
-        'id'   => 'title',
-        'type' => 'text',
-    ) );
-
-    $showcase_metabox->add_group_field( $showcase_metabox_group, array(
-        'name' => 'Alt text',
-        'desc' => 'Specify alt text for this slide.',
-        'id'   => 'alt-text',
-        'type' => 'text',
+        'name' => 'Content',
+        'desc' => 'Enter the content for the slide.',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
     ) );
 
     $showcase_metabox->add_group_field( $showcase_metabox_group, array(

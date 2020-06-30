@@ -9,6 +9,7 @@ function the_icon_showcase() {
 	if ( !empty( $icons ) ) {
         ?>
         <div class="icons text-center group">
+            <div class="wrap">
         <?php
         $num=1;
 		foreach ( $icons as $icon ) {
@@ -25,6 +26,7 @@ function the_icon_showcase() {
 			}
 		}
         ?>
+            </div>
         </div>
         <?php
 	}

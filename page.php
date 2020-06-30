@@ -7,6 +7,7 @@ get_header();
 	<?php the_showcase(); ?>
 
 	<div class="content-wide" role="main">
+		<div class="wrap">
 		<?php 
 		
 		if ( have_posts() ) :
@@ -16,6 +17,7 @@ get_header();
 		endif;
 
 		?>
+		</div>
 	</div><!-- #content -->
 
 	<?php the_icon_showcase(); ?>
