@@ -1,6 +1,10 @@
 
 
 .content-style {
+	a {
+		text-decoration: underline;
+	}
+
 	ol, ul {
 		padding: 5px 0 5px 35px;
 
@@ -106,6 +110,24 @@
 	max-width: 1680px;
 	margin: 0 auto;
 	position: relative;
+}
+
+
+.blog-listing {
+	.third {
+		padding: 20px 0;
+	}
+
+	@include respond-to( 768px ) {
+		.third {
+			padding: 20px;
+		}
+
+		.third:first-child {
+			padding-left: 0;
+			margin-left: 0;
+		}
+	}
 }
 
 

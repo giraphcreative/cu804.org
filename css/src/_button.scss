@@ -16,7 +16,7 @@
 	text-transform: uppercase;
 	transition: opacity 400ms ease-in-out;
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: none !important;
 	display: inline-block;
 	text-align: center;
 	background-color: $grey;

@@ -6,8 +6,8 @@ get_header();
 
 	<?php the_showcase(); ?>
 
-	<div class="content-wide" role="main">
-		<div class="wrap">
+	<div class="wrap">
+		<div class="content-wide" role="main">
 		<?php 
 		
 		if ( have_posts() ) :

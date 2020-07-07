@@ -12,8 +12,8 @@ get_header();
 
 	<?php the_icon_showcase(); ?>
 
-	<div class="content-wide home-bottom">
-		<div class="wrap">
+	<div class="wrap">
+		<div class="content-wide home-bottom">
 			<div class="text-center"><img src="<?php bloginfo('template_url') ?>/img/title-news.png" alt="Delivering Value" class="blog-header-image"></div>
 			<div class="blog-listing">
 			<?php

@@ -9,7 +9,8 @@ the_showcase();
 
 ?>
 
-	<div class="content-wide" role="main">
+	<div class="wrap">
+		<div class="content-wide" role="main">
 		<?php 
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
@@ -21,6 +22,7 @@ the_showcase();
 			endwhile;
 		endif;
 		?>
+		</div>
 	</div>
 
 <?php
