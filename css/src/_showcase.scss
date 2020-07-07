@@ -37,16 +37,7 @@
 
 		&.visible {
 			opacity: 1;
-		}
-		
-		& > a {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 10;
-			text-decoration: none;
+			z-index: 6;
 		}
 		
 		.slide-content {
@@ -62,6 +53,10 @@
 
 			@include respond-to( 1024px ) {
 				max-width: 600px;
+			}
+
+			@include respond-to( 1680px ) {
+				margin-left: 50px;
 			}
 		}
 		

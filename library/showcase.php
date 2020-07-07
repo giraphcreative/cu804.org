@@ -21,8 +21,7 @@ function the_showcase() {
 				$image = $slide['image'];
 
 				?>
-			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>" style="background-image: url(<?php print $slide["image"]; ?>);">
-				<?php if ( !empty( $link ) ) { ?><a href="<?php print $link ?>" class="<?php print ( stristr( $link, 'vimeo' ) || stristr( $link, 'youtube' ) || stristr( $link, 'google.com/maps' ) ? 'lightbox-iframe' : '' ) ?>"><?php } ?>
+			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>" style="background-image: url(<?php print $slide["image"]; ?>);<?php print ( !empty( $link ) ? 'cursor: pointer;' : '' ) ?>"<?php print ( !empty( $link ) ? ' onclick="location.href=\'' . $link . '\'"' : '' ) ?>>
 				
 				<?php if ( !empty( $content ) ) { ?>
 				<div class="wrap">
@@ -36,7 +35,6 @@ function the_showcase() {
 				</div>
 				<?php } ?>
 
-				<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 			</div>
 				<?php
 
