@@ -6,14 +6,9 @@ body {
 	color: $grey-dark;
 	background: lighten( $grey-light, 35% );
 
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 100%;
 	-webkit-text-size-adjust: none;
-
-	@include respond-to( $bp-m ) {
-		font-size: 16px;
-		line-height: 100%;
-	}
 }
 
 h1, h2, h3, h4, h5, h6, p {
