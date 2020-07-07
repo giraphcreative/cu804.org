@@ -10,7 +10,7 @@ body {
 	line-height: 100%;
 
 	@include respond-to( $bp-m ) {
-		font-size: 16px;
+		//font-size: 16px;
 		line-height: 100%;
 	}
 }
