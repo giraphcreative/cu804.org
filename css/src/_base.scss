@@ -8,7 +8,7 @@ body {
 
 	font-size: 14px;
 	line-height: 100%;
-	-webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: none;
 
 	@include respond-to( $bp-m ) {
 		font-size: 16px;
