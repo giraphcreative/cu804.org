@@ -15,10 +15,11 @@ function the_showcase() {
 		foreach ( $slides as $key => $slide ) {
 			if ( !empty( $slide["image"] ) ) {
 
-				// store the title and subtitle
+				// store the content, link, image, and title (if applicable)
 				$content = ( isset( $slide["content"] ) ? $slide["content"] : '' );
 				$link = ( isset( $slide["link"] ) ? $slide["link"] : '' );
 				$image = $slide['image'];
+				$title = ( isset( $slide['title'] ) ? $slide['title'] : '' );
 
 				?>
 			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>" style="background-image: url(<?php print $slide["image"]; ?>);<?php print ( !empty( $link ) ? 'cursor: pointer;' : '' ) ?>"<?php print ( !empty( $link ) ? ' onclick="location.href=\'' . $link . '\'"' : '' ) ?>>
@@ -33,6 +34,8 @@ function the_showcase() {
 					?>
 					</div>
 				</div>
+				<?php } else if ( !empty( $title ) ) { ?>
+					<h1 class="slide-title"><?php print $title; ?></h1>
 				<?php } ?>
 
 			</div>
@@ -92,6 +95,13 @@ function showcase_metabox( $meta_boxes ) {
         'desc' => 'Enter the content for the slide.',
         'id'   => 'content',
         'type' => 'wysiwyg',
+    ) );
+
+    $showcase_metabox->add_group_field( $showcase_metabox_group, array(
+        'name' => 'Title',
+        'desc' => "Enter the title for this page - this will only be visible if you don't enter any content.",
+        'id'   => 'title',
+        'type' => 'text',
     ) );
 
     $showcase_metabox->add_group_field( $showcase_metabox_group, array(

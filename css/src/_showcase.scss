@@ -58,31 +58,85 @@
 			@include respond-to( 1680px ) {
 				margin-left: 50px;
 			}
+			
+			h1 {
+				@include font-bold;
+				color: white;
+				text-transform: uppercase;
+				padding: 0;
+				transition: font-size 400ms ease-in-out, line-height 400ms ease-in-out;
+
+				font-size: 20px;
+				line-height: 25px;
+
+				@include respond-to( 768px ) {
+					font-size: 40px;
+					line-height: 50px;
+				}
+
+				@include respond-to( 1024px ) {
+					font-size: 50px;
+					line-height: 60px;
+				}
+			}
+
+			p {
+				color: white;
+			}
 		}
-		
-		h1 {
+
+			
+		h1.slide-title {
 			@include font-bold;
+			position: absolute;
+			text-align: center;
 			color: white;
 			text-transform: uppercase;
 			padding: 0;
 			transition: font-size 400ms ease-in-out, line-height 400ms ease-in-out;
+		
+			left: 0;
+			right: 0;
+			top: 30%;
 
-			font-size: 20px;
-			line-height: 25px;
+			font-size: 30px;
+			line-height: 40px;
 
 			@include respond-to( 768px ) {
-				font-size: 40px;
-				line-height: 50px;
+				font-size: 50px;
+				line-height: 70px;
 			}
 
 			@include respond-to( 1024px ) {
-				font-size: 50px;
-				line-height: 60px;
+				font-size: 70px;
+				line-height: 90px;
 			}
-		}
 
-		p {
-			color: white;
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				background: url(../img/gold-border.png) center center no-repeat;
+				background-size: contain;
+				left: 0;
+				right: 0;
+				height: 5px;
+
+				@include respond-to( 820px ) {
+					height: 8px;
+				}
+
+				@include respond-to( 1100px ) {
+					height: 10px;
+				}
+			}
+
+			&:before {
+				top: -10px;
+			}
+
+			&:after {
+				bottom: -10px;
+			}
 		}
 
 	}
