@@ -62,9 +62,15 @@ jQuery(document).ready(function($){
 
 	});
 
+	var menuPosition = $('nav').offset();
+	$( window ).on('resize',function() {
+		menuPosition = $('nav').offset();
+	});
+
+
 	$( window ).on('scroll',function(){
     	scrollPosition = $(this).scrollTop();
-    	if ( scrollPosition >= 191 & $( window ).innerWidth()>900 ) {
+    	if ( scrollPosition >= menuPosition.top & $( window ).innerWidth()>820 ) {
     		$( 'header nav' ).addClass( 'sticky' );
     	} else {
     		$( 'header nav' ).removeClass( 'sticky' );
