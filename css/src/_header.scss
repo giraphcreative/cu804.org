@@ -73,6 +73,7 @@ header {
 
 		@include respond-to( $bp-l ) {
 			max-width: 260px;
+			margin-left: 50px;
 		}
 	}
 
@@ -354,7 +355,7 @@ header {
 				ul.sub-menu {
 					display: none;
 					margin-bottom: 3px;
-					box-shadow: 0 20px 20px rgba( $grey-light, .4 );
+					box-shadow: 0 20px 20px rgba( black, .2 );
 					opacity: .9;
 
 					@include respond-to( 820px ) {
@@ -402,7 +403,7 @@ header {
 						ul {
 							display: none;
 							margin-bottom: 3px;
-							box-shadow: 0 20px 20px rgba( $grey-light, .4 );
+							box-shadow: 0 20px 20px rgba( black, .2 );
 							opacity: .9;
 
 							@include respond-to( 820px ) {
