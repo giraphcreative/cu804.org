@@ -355,7 +355,7 @@ header {
 				ul.sub-menu {
 					display: none;
 					margin-bottom: 3px;
-					box-shadow: 0 20px 20px rgba( black, .2 );
+					box-shadow: 0 10px 25px rgba( black, .2 );
 					opacity: .9;
 
 					@include respond-to( 820px ) {
@@ -403,7 +403,7 @@ header {
 						ul {
 							display: none;
 							margin-bottom: 3px;
-							box-shadow: 0 20px 20px rgba( black, .2 );
+							box-shadow: 0 10px 25px rgba( black, .2 );
 							opacity: .9;
 
 							@include respond-to( 820px ) {
