@@ -18,6 +18,10 @@
 		height: 575px;
 	}
 
+	@include respond-to( 1220px ) {
+		height: 675px;
+	}
+
 	.slide {
 		position: absolute;
 		top: 0;
@@ -40,6 +44,14 @@
 			z-index: 6;
 		}
 		
+		.wrap {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
 		.slide-content {
 			position: absolute;
 			color: white;
@@ -47,16 +59,22 @@
 			background-size: cover;
 			padding: 25px;
 			border-radius: 20px;
-			transition: max-width 400ms ease-in-out;
+			transition: max-width 400ms ease-in-out, margin 400ms ease-in-out;
 			pointer-events: none;
 			max-width: 500px;
+
+			@include respond-to( 768px ) {
+				top: 50%;
+				margin-top: -100px;
+				left: 60px;
+			}
 
 			@include respond-to( 1024px ) {
 				max-width: 600px;
 			}
 
 			@include respond-to( 1680px ) {
-				margin-left: 50px;
+				left: 70px;
 			}
 			
 			h1 {

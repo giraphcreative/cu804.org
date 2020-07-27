@@ -16,6 +16,14 @@ jQuery(document).ready(function($){
 		// count the slides
 		var slide_count = slides.size();
 
+		// loop through the slides and set the top margins if the screen is larger than 768px wide.
+		slides.each(function(){
+			var slide_content = $(this).find('.slide-content');
+			var slide_content_padding = slide_content.css( 'padding-top' ).replace('px','');
+			var slide_content_target_margin = -( slide_content.height() / 2 ) - slide_content_padding ;
+			slide_content.css( 'margin-top', slide_content_target_margin );
+		});
+
 		// if it exists
 		if ( typeof( showcase ) !== 'undefined' ) {
 
