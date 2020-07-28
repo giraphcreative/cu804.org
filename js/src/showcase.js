@@ -17,12 +17,23 @@ jQuery(document).ready(function($){
 		var slide_count = slides.size();
 
 		// loop through the slides and set the top margins if the screen is larger than 768px wide.
-		slides.each(function(){
-			var slide_content = $(this).find('.slide-content');
-			var slide_content_padding = slide_content.css( 'padding-top' ).replace('px','');
-			var slide_content_target_margin = -( slide_content.height() / 2 ) - slide_content_padding ;
-			slide_content.css( 'margin-top', slide_content_target_margin );
-		});
+		if ( $(window).innerWidth() >= 768 ) {			
+			slides.each(function(){
+
+				// select the slide content div
+				var slide_content = $(this).find('.slide-content');
+
+				// find the top padding so we can account for it in our margin calculation
+				var slide_content_padding = slide_content.css( 'padding-top' ).replace('px','');
+
+				// calculate the top margin on the slide content container so it's centered vertically
+				var slide_content_target_margin = -( slide_content.height() / 2 ) - slide_content_padding ;
+
+				// apply our top margins
+				slide_content.css( 'margin-top', slide_content_target_margin );
+
+			});
+		}
 
 		// if it exists
 		if ( typeof( showcase ) !== 'undefined' ) {

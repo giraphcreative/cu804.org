@@ -62,11 +62,14 @@
 			transition: max-width 400ms ease-in-out, margin 400ms ease-in-out;
 			pointer-events: none;
 			max-width: 500px;
+			margin: 40px 60px;
 
 			@include respond-to( 768px ) {
 				top: 50%;
 				margin-top: -100px;
 				left: 60px;
+				margin-left: 0;
+				margin-right: 0;
 			}
 
 			@include respond-to( 1024px ) {
