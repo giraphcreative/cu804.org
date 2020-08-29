@@ -16,8 +16,10 @@ jQuery(document).ready(function($){
 		// count the slides
 		var slide_count = slides.size();
 
-		// loop through the slides and set the top margins if the screen is larger than 768px wide.
-		if ( $(window).innerWidth() >= 768 ) {			
+		// if the screen is the wider than 768
+		if ( $(window).innerWidth() >= 768 ) {
+
+			// loop through the slides and set the top margins if the screen is larger than 768px wide.
 			slides.each(function(){
 
 				// select the slide content div
