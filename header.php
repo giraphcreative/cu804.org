@@ -23,6 +23,15 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178042198-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178042198-1');
+</script>
+
 </head>
 <body <?php body_class(); ?>>
 <div class="container">
