@@ -1,20 +1,22 @@
+/*
+// CSS Classes  below can be populated and changed to modify your calculator deployment.
+// IMPORTANT: Do Not Modify the KJE.css file!  The KJE.css file is replaced during the update process
+// All CSS customization must be done in this file (you can override KJE.css classes)
+//
+// For information on customizing this file please see:
+// https://www.dinkytown.net/money/V3customize.html
+*/
+
 #KJEAllContent {
-    background: #ffffff;
-    color: #000000;
+}
+
+#KJECalculatorTable {
 }
 
 .KJEFontHeading {
-    color:#000000;
-}
-
-.KJEError {
-    color:#BB0000;
 }
 
 .KJETitle {
-}
-
-.KJECalculatorTable {
 }
 
 .KJEReportTitle {
@@ -22,19 +24,6 @@
 
 .KJEReportTitleBlock {
 }
-
-.KJEWidthConstraint {
-    background: #ffffff;
-}
-
-.KJEWrapper {
-    background: #ffffff;
-}
-
-body {
- margin: 0;
-}
-
 
 /**CUSTOMCSS**/
 
