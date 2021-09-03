@@ -20,12 +20,25 @@ body.KJEBody {
     padding: 40px 0 0 0;
 }
 
+#KJEAllContent * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#KJEAllContent button, #KJEAllContent .KJECommandButton, #KJEAllContent input.KJEMenuButton[type=button], #KJEAllContent select, #KJEAllContent div.KJEDroppee, #KJECalculatorScreenSize, #KJEFixed, #KJECommandButtons, #KJEReportButtons, #KJEMoreButtons, #KJECalculatorTable {
+    -webkit-box-sizing: border-box  !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+
 #KJEAllContent, body.KJEBody, body.KJEReportBody {
     -webkit-text-size-adjust: none;
     font-family: Arial,Helvetica,sans-serif;
     font-weight: normal;
-    font-size: 100%;
-    line-height: 1.2em;
+    line-height: normal;
+    font-size: 1.0rem;/*font_normal*/
 }
 
 body.KJEReportBody {
@@ -93,23 +106,22 @@ div.KJEDropper, div.KJEGraphDropper
 }
 
 #KJETitleH1, h1.KJEFontTitle {
-    font-size:1.4rem;
     font-weight:bold;
-    line-height:1.6rem;
+    line-height:normal;/*line_height_large*/
+    font-size:1.4rem;/*font_large*/
 }
 
 .KJETitleExtra {
 }
-
+/*
 @media screen and (min-width:900px) {
     #KJEReport, #KJECalculatorScreenSize {
         min-width: 900px;
     }
 }
-
+*/
 #KJECalculatorScreenSize, #KJEFixed, #KJECommandButtons, #KJEReportButtons, #KJEMoreButtons {
     max-width: 900px;
-    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -128,8 +140,9 @@ div.KJEDropper, div.KJEGraphDropper
 }
 
 #KJEScrollSticky {
-    line-height: .9em;
+    line-height: normal;
     padding-bottom: 10px;
+    font-size: 1.2rem;/*font_button*/
     display:none;
 }
 
@@ -148,8 +161,6 @@ div.KJEDropper, div.KJEGraphDropper
 }
 
 #KJECalculatorTable {
-    font-size: 1rem;
-    box-sizing: border-box;
     right:0;
     left:0;
     padding: 3px;
@@ -164,6 +175,7 @@ div.KJEDropper, div.KJEGraphDropper
     box-shadow: 0 0 0;
     -webkit-box-shadow: 0 0 0;
     -moz-box-shadow: 0 0 0;
+    font-size: 1.0rem;/*font_normal*/
 }
 
 div.KJECalculatorReportTable
@@ -191,7 +203,9 @@ div.KJECalculatorReportTable
 #KJETitle     {
     font-size: 1.3em;
     text-align: center;
-    background-image: url('data:image/png;base64,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');
+    /*background-image: url('data:image/png;base64,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');
+    */
+    background-image: url('data:image/png;base64,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');
     background-repeat: no-repeat;
     background-position: -8px -8px;
     background-size:85px 85px;
@@ -235,8 +249,13 @@ div.KJEButtonIsFixed {
     margin: 0;
 }
 
+#KJEAllContent input[type='button'] {
+    float: none;
+    padding: 5px 3px;
+    margin: 4px 2px 7px 2px;
+}
+
 .KJECommandButton, .KJEMoreButton {
-    font-size: 1.2rem;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-appearance: none;
@@ -250,6 +269,7 @@ div.KJEButtonIsFixed {
     border-width: 2px;
     border-style: solid;
     transition: background .3s ease-in-out;
+    font-size: 1.2rem;/*font_button*/
 }
 
 button.KJEMoreButton {
@@ -274,13 +294,17 @@ button.KJEMoreButton {
     overflow: hidden;
 }
 
-#KJEMenuWindowTitle {
+#KJEMenuWindowTitle, #KJEMenuSavedTitle {
     display: block;
     height: inherit;
     text-align: center;
     padding: 4px 0 0 0;
     font-size: .9em;
     font-weight: bold;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 div.KJEMenuHeader {
@@ -379,13 +403,13 @@ button.KJEMenu:hover {
 }
 
 #KJEReport, #KJEReport p {
-    font-size: 1.0rem;
     line-height: normal;
+    font-size: 1.0rem;/*font_normal*/
 }
 
 #KJEDefinitions, #KJEDefinitions p {
-    font-size: 1.0rem;
     line-height: normal;
+    font-size: 1.0rem;/*font_normal*/
 }
 
 .KJEDefinitionsHeader {
@@ -418,15 +442,15 @@ button.KJEDefinitionIcon:focus,
 button.KJECloseButton:focus
 {
     outline-offset: 0px;
-    outline: lightgray dashed 2px;
+    outline: 2px dashed #444444/*KJECommandButton*/;
+
 }
 
 button.KJEDefinitionIcon {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     text-align: center;
     padding: 0 0;
-    font-size: .9rem;
     border-radius: 12px;
     border-width: 0;
     cursor:help;
@@ -434,6 +458,8 @@ button.KJEDefinitionIcon {
     margin-top: 7px;
     border-width: 1px;
     border-style: solid;
+    font-size: 0.9rem;/*font_small*/
+    vertical-align: top;
 }
 /*.KJEInputContainer button.KJEDefinitionIcon {
     float: right;
@@ -460,10 +486,11 @@ button.KJECloseButton {
     height: 22px;
     text-align: center;
     padding: 0;
-    font-size: .9rem;
     border-radius: 2px;
     border-width: 1px;
     cursor:hand;
+    font-size: 0.9rem;/*font_small*/
+
 }
 
 #KJEDefinitions {
@@ -569,7 +596,6 @@ div.KJEInputContainer div.KJEIncrementer
 
 div.KJESlider div.KJEScale {
     border:none;
-    font-size: .80rem;
     left-margin: 10px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -577,6 +603,7 @@ div.KJESlider div.KJEScale {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 0.8rem;/*font_tiny*/
 }
 
 div.KJEInputContainer div.KJELabel {
@@ -591,7 +618,7 @@ div.KJEInputContainer div.KJELabel Label.KJELabel{
 }
 
 div.KJEInputContainer Label.KJEHelp, div.KJEInputContainer div.KJEHelp div.KJEHelp   {
-    width: 188px;
+    width: 185px;
     display: inline-block;
     text-align: right;
     cursor:help;
@@ -621,10 +648,10 @@ div.KJEInputContainer Label.KJEHelp, div.KJEInputContainer div.KJEHelp div.KJEHe
 
 .KJEInputContainer .KJERadioTrailingLabel {
     overflow: visible;
-    padding: 0 5px 0 0;
+    padding: 0;
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
 }
 
@@ -632,6 +659,8 @@ div.KJEInputContainer Label.KJEHelp, div.KJEInputContainer div.KJEHelp div.KJEHe
     position: relative;
     display: block;
 }
+.KJEInputContainer .KJERadioes {
+ }
 
 .KJEInputContainer .KJEDropBox {
     font-weight: normal;
@@ -681,14 +710,14 @@ div.KJEDropBoxDivModern {
     -moz-appearance: none;
     appearance: none;
     border-radius: 0px;
-    border: 1px solid #BBBBBB;
+    border: 1px solid #8F8F8F;
     padding: 4px;
     font-weight: normal;
     font-size: 1em;
 }
 
 .KJEInputContainer input.KJEInputModern:focus, .KJEInputContainer select.KJEDropBox:focus {
-    outline: 2px dashed lightgray;
+    outline: 2px dashed #444444/*KJECommandButton*/;
     outline-offset: -3px;
 }
 
@@ -716,6 +745,8 @@ div.KJEDropBoxDivModern {
 
 .KJEInputContainer input.KJEInputModern[type='radio']  {
     border-radius:50%;
+    position: relative;
+    opacity: 100%;
 }
 
 .KJEInputContainer input.KJEInputModern[type='radio']:before {
@@ -751,7 +782,7 @@ div.KJEDropBoxDivModern {
 }
 
 .KJEInputContainer input.KJEInputModern[type='checkbox']:checked:before {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMcSURBVDhPXZNNSFRRFMffe/Nm3jjj6KCSThpBi8hhdCKGLNBxkRGWHxuFQsKNGCgJRRISBAUu3LQIxlW1cBWCi8rWblyPQR80QqAxZlALne8P502/Mzxlpgfnnft+75z/vfece9V0On3ZZrMVTNO0q6paVhQlxLgVhjMzsH1YhvFX2C6+CFOz2eydubm516FQaG9qauqumslkLsAby+XyTxL+MvYwduJ1fBGWZmwwzuHTeJmsY35+/t3y8vJFxkf9/f3f1Hw+31QsFku6rqeZTSGugbEBU/F5WAEm46wV17KxsfFqaGhokH86QpVHK/A4HI5kiYdvneX7QL0wP8gLM2BHsDLMc3Bw8GhmZuZGtYjf71cUAuqSyaSay+Vkmy5q1gFrg52HXYK1wGRCiZudnp5OsMXysdntdnNzczOhEBQkwU6CgwK2YmdhbthV2BW+dUyDBdbX12Oapp2IiC0sLPwm7onCy02gId4SE9E6/E28E5MOuff39yPt7e2FapFgMFhIJBJPialXKLaaSqV8rOAhoM3atgKziYfZWM3tiYmJg2oRwzDMaDT6njiPlEVh36cODw+fRSKRVDwefwE0KkrWI+Krq6ufSTarhMzFxcVP5J5MrNCFD+FwuDJbd3d3and396UUVv4hqiE+7fP5klUi5Z6enl9M3kucehynjI2NnQSIdXV1FXZ2dt7y8xyruTc+Pv4TfrIal8uV2traekDdGqSbIkKcV5mcnJQjXyMWCARELL6ysiKnuXpLpaWlpTckNllNceKlUU4p6uzw8PCfquCKdXZ2lpubm2tYX1/fHklhTBqg0ShNmsKqKsUWOIjYHsHVs9eYx+MpxGKx58TKkZAtVboqdYKpcrdEzI7dGh0d/U5S6X8RrEhXPxJzRmZHSG6AQ0RgcitscrKdVsEMDtc1xL6QWCM2MDAQZQtyA6QedurikRqRKysTYVXOSSPQhhdzINY7MjLyA4HKNr1er7m9vf2Yf5WrgveIMW7A14sgXpOT7bIK5gBIvRx83+dyZqXga2tredh16wboxJ0mzg2zW8Vmazn1H58fr6oY78wcAAAAAElFTkSuQmCC");
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHsSURBVDhPlZO/a+JgGMeNIoIgCEJBsIubWH9swoGI1KUc6iJyEMTNDnW5WwoWDq6DYIciB64dnA7BpUfwL3ANgbvhTulgsVo5kLOJmqSY3PMGIk/s25MOn5D3fb/PJ++TN7Hpuv5WGMA+n8/ZUqkkN5vNu9Vq9Y4W3AcDhYfVapVnGEYD1HQ6LdCC+zjo9Xq3DofjGSS6CS34X2az2VUwGFSwJBwO08OvIYriWaVSecISp9Op9fv9J2oBDUVRjjiO+22327cSQq1We1yv1xfUIhrT6bQVCARULInH4yrs8jNZJyFmuVz6ZVn+hAsxcEofWJb9iyUul0vjef7WzJC+DxaLxZdWqyWNx+NrLDDpdDo/oJgctSnS6vW6gDM2kHxPpVLG02KxmDQajb7iwGQyqfj9fhFJ9EQiMcEZgq1QKGwDhGg0qoLsG1mEdk+LxeI9zG9343a7JUEQPr4Qlctly4dFiEQiRDZut9syjHFLm0ajcbMrMUTwos+y2ewfFDYIhUK6z+ezzCWTyQeahGBcoIWTXC73AGH8dAsej0cdDAaXuwKT7Q3s7H0+n/8FRZtdCfAMp8rhwl0sA0mSjkH2Ewotskwmw+McDeoktHkHAqNNr9erDYfDc1oOQ50kwM+5Ji+82+0qtHUruu0fxB8RQ7LlEn0AAAAASUVORK5CYII=");
 }
 
 .KJEInputContainer div.KJELine {
@@ -799,15 +830,15 @@ hr.KJEFooterLine {
 }
 
 .KJESubTitle  {
-    font-size: 1rem;
     font-weight: normal;
     line-height: normal;
+    font-size: 1.0rem;/*font_normal*/
 }
 
 #KJEReport p.KJEFooter, #KJEAllContent p.KJEFooter, body.KJEBody p.KJEFooter, p.KJEFooter, .KJEFooter  {
-    font-size: 0.8rem;
     line-height: normal;
     font-weight: normal;
+    font-size: 0.8rem;/*font_tiny*/
 }
 
 #KJEGuiDataPoint {
@@ -1011,7 +1042,7 @@ table.KJEToggleTable td{
 }
 
 
-.KJEToggleTitle, h2.KJEToggleTitle{
+.KJEToggleTitle, td.KJEToggleTitle, h2.KJEToggleTitle{
     font-size:1em;
     font-weight:bold;
     cursor: pointer;
@@ -1063,13 +1094,13 @@ td.KJEToggleTitle49Cell {
 }
 
 .KJEToggleSubTitle {
-    font-size:1rem;
     font-weight:bold;
     cursor: pointer;
     text-align: left;
     text-decoration: none;
     padding-left: 10px;
     width: 100%;
+    font-size: 1.0rem;/*font_normal*/
 }
 
 .KJEGraphIcon {
@@ -1085,6 +1116,7 @@ td.KJEToggleTitle49Cell {
 
 .KJEInputDiv {
     padding-top: 5px;
+    padding-bottom: 5px;
     display: block;
     overflow: visible;
     width: auto;
@@ -1161,7 +1193,6 @@ h2.KJEGraphTitle {
 }
 
 div.KJEDroppee {
-    box-sizing: border-box;
     height: auto;
     padding:  10px 0 0 0;
 }
@@ -1177,21 +1208,6 @@ div.KJEReportTableDiv {
     padding: 0;
 }
 
-/*
-.KJEReportTableDiv {
-    box-sizing: border-box;
-    margin: 20px 0;
-    border: 1px black solid;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    padding: 2px;
-    width:100%;
-    box-shadow: 5px 5px 10px #DDDDDD;
-    -webkit-box-shadow: 5px 5px 10px #DDDDDD;
-    -moz-box-shadow: 5px 5px 10px #DDDDDD;
-}
-*/
 .KJEInput .KJEReportTableDiv {
     width: 100%;
 }
@@ -1364,6 +1380,7 @@ table.KJEReportTable caption.KJEHeaderRow,
 table.KJEScheduleTable caption.KJEHeaderRow
 {
     border-bottom:none;
+    caption-side: top;
 }
 
 .KJELeft, table.KJEReportTable th.KJELeftPad, table.KJECalcTable th.KJELeftPad  {
@@ -1434,9 +1451,6 @@ table.KJEReportTable td.KJECell70, th.KJECell70, table.KJECalcTable td.KJECell70
 }
 table.KJEReportTable td.KJECell85, th.KJECell85, table.KJECalcTable td.KJECell85 {
     width: 85%;
-}
-table.KJEReportTable td.KJECellNB, th.KJECellNB, table.KJECalcTable td.KJECellNB {
-    border-width: 0;
 }
 
 div.KJEReportTableSidebySide {
@@ -1558,9 +1572,9 @@ thead.KJEScheduleTHeader {
 #KJECalculatorDescID {
     display: block;
     width: 100%;
-    font-size: 1rem;
-    line-height: 1.2rem;
+    line-height: normal;
     margin-top: 20px;
+    font-size: 1.0rem;/*font_normal*/
 }
 
 #KJESplash{
@@ -1599,17 +1613,17 @@ div.KJELogo {
 
     .KJECommandButton, .KJEMoreButton {
         width:130px;
-        font-size: 1.0rem;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
+        font-size: 1.0rem;/*font_normal*/
     }
 
     #KJETitle {
         font-size: 1.1em;
     }
     div.KJESubTitle {
-        font-size: 0.9rem;
+       font-size: 0.9rem;/*font_small*/
    }
 
     .KJEWidthConstraint {
@@ -1892,6 +1906,9 @@ div.KJELogo {
         border-right: 1px solid black;
     }
 
+    table.KJEReportTable tr.KJEOddRow,table.KJEScheduleTable tr.KJEScheduleOddRow {
+        background-color: #FFFFFF;
+    }
 
     /* The borders for the normal report tables */
     table.KJEReportTable {
@@ -1933,13 +1950,6 @@ div.KJELogo {
         border-right: 1px solid black;
     }
 
-    table.KJEReportTable td.KJECellNB {
-        border-width: 0;
-    }
-
-    table.KJEReportTableNB {
-        border-width: 0;
-    }
 }
 
 span.KJEAccessible {
@@ -1951,7 +1961,15 @@ span.KJEAccessible {
     text-align: left !important;
     overflow: hidden !important;
 }
-
+label.KJEAccessible {
+    position: absolute !important;
+    top: -1000px !important;
+    left: -1000px !important;
+    height: 1px !important;
+    width: 1px !important;
+    text-align: left !important;
+    overflow: hidden !important;
+}
 figcaption.KJEAccessible {
     font-size:0;
     width:0;
@@ -2089,6 +2107,10 @@ input.KJEMenuButton[type=button]:active {
     top: 2px;
     left: 1px;
 }
+input.KJEMenuButton[type=button] {
+    border-style:solid;
+    border-radius: 6px;
+}
 
 input.KJEMenuButtonWide[type=button] {
     width:100%;
@@ -2123,7 +2145,7 @@ div.KJEMenuGroupRow {
     text-decoration: none;
     vertical-align: bottom;
     margin: 0;
-    background:#EEEEEE;
+    background:#EEEEEE/*PAGE_BACKGROUND_COLORDARKER*/;
 }
 
 div.KJEMenuSelectedRow {
@@ -2240,8 +2262,8 @@ img.KJEMiddle {
     color: #222;
 }
 
-#KJEAllContent,.KJEWidthConstraint, .KJEWrapper {
-    background-color: #FFFFFF;
+body.KJEBody #KJEAllContent,.KJEWidthConstraint, .KJEWrapper {
+    background-color: #FFFFFF/*PAGE_BACKGROUND_COLOR*/;
 }
 
 #KJECalculatorTable {
@@ -2256,8 +2278,12 @@ img.KJEMiddle {
     border-color: #BB3333;
 }
 
+div.KJEError {
+    color:#BB3333 !important;
+}
+
 .KJENoJavaScript {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF/*PAGE_BACKGROUND_COLOR*/;
     border-color: #666666;
 }
 
@@ -2291,7 +2317,7 @@ span.KJERequired:hover span.KJERequiredShowHover:after {
 button.KJEDefinitionIcon, button.KJECloseButton {
     color:#0000D4;
     border-color:#0000D4;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF/*PAGE_BACKGROUND_COLOR*/;
 }
 
 button.KJEDefinitionIcon:active,
@@ -2302,25 +2328,32 @@ button.KJECloseButton:focus,
 button.KJECloseButton:hover {
     color:#FFFFFF;
     background-color:#0000D4;
-    outline-color:lightgray;
+    outline-color: #444444/*KJECommandButton*/;
 }
 
 /* Controls */
 .KJECommandButton, .KJEMoreButton {
     color: #FFFFFF/*KJECommandButton*/;
     background-color: #333333/*KJECommandButton*/;
-    border-color: #666666/*KJECommandButton*/;
+    border-color: #444444/*KJECommandButton*/;
 }
 
-.KJECommandButton:hover, .KJEMoreButton:hover, .KJECommandButton:active, .KJEMoreButton:active, .KJECommandButton:focus, .KJEMoreButton:focus   {
-    background: #666666/*KJECommandButton*/;
+.KJECommandButton:focus, .KJEMoreButton:focus   {
+    background-color: #333333/*KJECommandButton*/;
+
+    outline: none;
+    box-shadow: 0 0 2pt 2pt #444444/*KJECommandButton*/;
 }
 
+.KJECommandButton:hover, .KJEMoreButton:hover, .KJECommandButton:active, .KJEMoreButton:active   {
+    background-color: #444444/*KJECommandButton*/;
+    border-color: #333333/*KJECommandButton*/;
+}
 
 .KJEInputDiv,
 .KJEDropper,
 .KJEGraphDropper {
-    border-color: #ffffff;
+    border-color: #FFFFFF/*PAGE_BACKGROUND_COLOR*/;
 }
 
 div.KJEDropper:hover, div.KJEGraphDropper:hover {
@@ -2336,18 +2369,18 @@ div.KJEDropper:focus, div.KJEGraphDropper:focus {
 }
 
 div.KJEButtonIsFixed {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF/*PAGE_BACKGROUND_COLOR*/;
     border-color: #333;
 }
 
 .KJEInputContainer input.KJEInputModern[type='radio']:focus,.KJEInputContainer input.KJEInputModern[type='radio']:active {
     box-shadow:0 0 5px 0px #0080FF inset;
-    outline: 2px dashed lightgray;
+    outline: 2px dashed #444444/*KJECommandButton*/;
 }
 
 .KJEInputContainer input.KJEInputModern[type='checkbox']:focus,.KJEInputContainer input.KJEInputModern[type='checkbox']:active {
     box-shadow:0 0 5px 0px #0080FF inset;
-    outline: 2px dashed lightgray;
+    outline: 2px dashed #444444/*KJECommandButton*/;
 }
 
 div.KJEDropBoxDivModern {
@@ -2407,7 +2440,7 @@ button.KJEMenu:hover {
 }
 
 div.KJEMenuHeader {
-    background-color: #EEEEEE;
+    background-color: #EEEEEE/*PAGE_BACKGROUND_COLORDARKER*/;
     border-color:#BBBBBB;
 }
 
@@ -2432,7 +2465,7 @@ div.KJEMenuHeader {
 }
 
 hr.KJEFooterLine {
-    border: 1px solid #CCCCCC;
+    border: 1px solid #CCCCCC/*PAGE_BACKGROUND_COLORDARKERDARKER*/;
     height: 0px;
     width: 100%;
     margin-bottom: 20px;
@@ -2456,7 +2489,7 @@ hr.KJEDivide {
 table.KJEReportTable  thead.KJEReportTHeader tr.KJEHeaderRow,
 table.KJEScheduleTable  thead.KJEScheduleTHeader tr.KJEScheduleHeaderRow,
 table.KJEReportTable caption.KJEHeaderRow, table.KJEScheduleTable caption.KJEHeaderRow {
-    background-color: #CCCCCC;
+    background-color: #CCCCCC/*PAGE_BACKGROUND_COLORDARKERDARKER*/;
     color: #222;
 }
 
@@ -2501,15 +2534,15 @@ table.KJEIndexTable th.KJELabel a, #KJEAllContent a {
 table.KJEReportTable, table.KJECalcTable, table.KJEScheduleTable,
 table.KJEScheduleTable tr.KJEScheduleHeaderRow, table.KJEReportTable tr.KJEHeaderRow, table.KJECalcTable tr.KJEHeaderRow,
 table.KJEScheduleTable tr.KJEScheduleFooterRow, table.KJEReportTable tr.KJEFooterRow, table.KJECalcTable tr.KJEFooterRow {
-    background-color: #CCCCCC;
+    background-color: #CCCCCC/*PAGE_BACKGROUND_COLORDARKERDARKER*/;
 }
 
 table.KJEReportTable tr.KJEEvenRow, table.KJEScheduleTable tr.KJEScheduleEvenRow {
-    background-color: #EEEEEE;
+    background-color: #EEEEEE/*PAGE_BACKGROUND_COLORDARKER*/;
 }
 
 table.KJEReportTable tr.KJEOddRow,table.KJEScheduleTable tr.KJEScheduleOddRow {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF/*PAGE_BACKGROUND_COLOR*/;
 }
 
 table.KJEScheduleTable tr.KJEScheduleHeaderRow:hover, table.KJEReportTable tr.KJEHeaderRow:hover, table.KJECalcTable tr.KJEHeaderRow:hover,
@@ -2659,6 +2692,43 @@ input[type="range"]::-moz-range-progress {
 .KJEInputContainer input[type=range]::-ms-fill-upper, .KJEInputContainer input[type=range]:active::-ms-fill-upper
 {
     background: #BBBBBB;
+}
+
+@media print {
+
+    .KJEWrapper {
+        border-color: #FFFFFF;
+    }
+
+    .KJEWrapper, table.KJEReportTable tr.KJEOddRow,table.KJEScheduleTable tr.KJEScheduleOddRow, table.KJEReportTable tr.KJEEvenRow,table.KJEScheduleTable tr.KJEScheduleEvenRow, table.KJEScheduleTable, table.KJEReportTable {
+        background: #FFFFFF;
+        background-color: #FFFFFF;
+    }
+
+    table.KJEScheduleTable, table.KJEReportTable,
+    table.KJEScheduleTable caption.KJEScheduleHeaderRow,
+    table.KJEReportTable caption.KJEHeaderRow,
+    table.KJEScheduleTable thead.KJEScheduleTHeader,
+    table.KJEScheduleTable tr.KJEScheduleHeaderRow,
+    table.KJEScheduleTable tr.KJEScheduleEvenRow,
+    table.KJEScheduleTable tr.KJEScheduleOddRow,
+    table.KJEReportTable tr.KJEHeaderRow,
+    table.KJEReportTable tr.KJEEvenRow,
+    table.KJEReportTable tr.KJEOddRow,
+    table.KJEScheduleTable td.KJEScheduleCell,
+    table.KJEScheduleTable td.KJEScheduleCellStrong,
+    table.KJEScheduleTable th.KJEScheduleHeading,
+    table.KJEScheduleTable th.KJEScheduleCell,
+    table.KJEScheduleTable th.KJEScheduleCellStrong,
+    table.KJEReportTable td.KJECell,
+    table.KJEReportTable td.KJECellStrong,
+    table.KJEReportTable th.KJEHeading,
+    table.KJEReportTable th.KJECell,
+    table.KJEReportTable th.KJECellStrong,
+    table.KJEReportTable th.KJECellBorder,
+    table.KJEReportTable td.KJECellBorder {
+        border-color: #565656;
+    }
 }
 
 /*Proofing CSS*/
