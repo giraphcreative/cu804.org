@@ -1,4 +1,4 @@
-KJE.sEmailFooter = "\n\n-------------------------------------------------------------\n**COMPANYNAME** http://**URL**\n-------------------------------------------------------------\n"
+KJE.sEmailFooter = "\n\n-------------------------------------------------------------\n cu804.org\n-------------------------------------------------------------\n"
 //
 // Examples below can be uncommented and changed to modify your calculator deployment
 // IMPORTANT: Do Not Modify the KJE.js file!  The KJE.js file is replaced during the update process

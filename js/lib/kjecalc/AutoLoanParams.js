@@ -9,7 +9,7 @@
   KJE.parameters.set("NONTAX_FEES",40);
   KJE.parameters.set("SALES_TAX_RATE",6.00);
   KJE.parameters.set("TAXABLE_FEES",0);
-  KJE.parameters.set("TERM",48);
+  KJE.parameters.set("TERM",84);
   KJE.parameters.set("TRADE_ALLOWANCE",5000);
   KJE.parameters.set("PAYMENT_TYPE_HIDE",true);
 

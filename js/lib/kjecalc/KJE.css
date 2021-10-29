@@ -423,6 +423,10 @@ button.KJEMenu:hover {
     line-height: normal;
 }
 
+.KJEGuiDefnPopup:focus {
+    outline: 2px solid #0080FF;
+}
+
 .KJEDefinitionPopup, .KJEDefinitionPopup dl, .KJEDefinitionPopup dd, .KJEDefinitionPopup dt, .KJEDefinitionPopup h3, .KJEDefinitionPopup th, .KJEDefinitionPopup td, .KJEDefinitionPopup ul, .KJEDefinitionPopup li, .KJEDefinitionPopup ol {
     font-size: 1.0em;
     line-height: normal;
@@ -954,7 +958,7 @@ div.KJEGuiDefnPopup {
     border-width: 1px;
     border-style: solid;
     position: absolute;
-    display: none;
+    display: block; /*08212021*/
     z-index: 99;
     padding: 9px;
     margin: 1em 0 3em;
@@ -966,6 +970,7 @@ div.KJEGuiDefnPopup {
     -moz-box-shadow: 3px 3px 3px #333;
     -webkit-animation: fadeIn .4s;
     animation: fadeIn .4s;
+    ddd
 }
 
 div.KJEGuiDefnPopup dt {

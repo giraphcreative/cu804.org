@@ -13,16 +13,10 @@
 #KJECalculatorTable {
 }
 
-.KJEFontHeading {
+#KJETitle {
 }
 
-.KJETitle {
-}
-
-.KJEReportTitle {
-}
-
-.KJEReportTitleBlock {
+.KJECommandButton, .KJEMoreButton {
 }
 
 /**CUSTOMCSS**/
