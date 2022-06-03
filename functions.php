@@ -14,9 +14,4 @@ function require_multi( $files ) {
 
 
 // include utility functions
-require_multi( 'core', 'admin', 'metabox', 'metabox-theme', 'images', 'paginate', 'metabox', 'showcase', 'icons', 'button', 'calculator', 'editor', 'kjecalc', 'login' );
-
-
-// require composer autoload
-require_once 'vendor/autoload.php';
-
+require_multi( 'cmb2/init', 'core', 'admin', 'metabox', 'metabox-theme', 'images', 'paginate', 'metabox', 'showcase', 'icons', 'button', 'calculator', 'editor', 'kjecalc', 'login' );

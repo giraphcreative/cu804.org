@@ -91,6 +91,35 @@ jQuery(document).ready(function($){
 			};
 
 
+			// handle slide clicks
+			$( '.slide' ).on( 'click.showcase', function(){
+
+				// store the slide 
+				var link = $(this).data('href');
+
+				// check if it's on this site or is an approved location
+				if (link.match( /cu804.org/i ) || 
+					link.match( /cu804.test/i ) || 
+					link.match( /cu804.giraph.io/i ) || 
+					link.match( /www.mobicint.net/i ) || 
+					link.charAt(0) === '#' || 
+					link.charAt(0) === '/' ) {
+
+					// go to the url
+					location.href = link;
+
+				} else {
+
+					// if not, do the third-party link speedbump
+					if ( confirm( "This link is taking you to a third party provider - are you sure you want to proceed?" ) ) {
+						window.open( link, "_blank" );
+					}
+
+				}
+
+			});
+
+
 			// set showcase initial height when the first image is loaded.
 			setTimeout( function() {
 				// once we're loaded up, set a timer to auto-rotate the slides.

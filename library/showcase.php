@@ -22,7 +22,7 @@ function the_showcase() {
 				$title = ( isset( $slide['title'] ) ? $slide['title'] : '' );
 
 				?>
-			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>" style="background-image: url(<?php print $slide["image"]; ?>);<?php print ( !empty( $link ) ? 'cursor: pointer;' : '' ) ?>"<?php print ( !empty( $link ) ? ' onclick="location.href=\'' . $link . '\'"' : '' ) ?>>
+			<div class="slide<?php print ( $key==0 ? ' visible' : '' ); ?>" style="background-image: url(<?php print $slide["image"]; ?>);<?php print ( !empty( $link ) ? 'cursor: pointer;' : '' ) ?>"<?php print ( !empty( $link ) ? ' data-href="' . $link . '"' : '' ) ?>>
 				
 				<?php if ( !empty( $content ) ) { ?>
 				<div class="wrap">
