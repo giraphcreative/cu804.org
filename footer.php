@@ -40,8 +40,8 @@ $admin_email = get_option( 'admin_email' );
 				<img src="<?php bloginfo('template_url') ?>/img/logo-equal-housing.png" class="equal-housing" /> Equal Housing Lender - We do business in accordance with the Federal Fair Housing Law and the Equal Housing Opportunity Act. 
 			</div>
 			<div class="one-fifth notices-menu">
-				<a href="/wp-content/uploads/2020/05/Privacy-Policy.pdf">Privacy Policy</a><br>
-				<a href="/notices">Notices & Policies</a>
+				<a href="/privacy-policy/">Privacy Policy</a><br>
+				<a href="/notices/">Notices & Policies</a>
 			</div>
 		</div>
 	</div>
