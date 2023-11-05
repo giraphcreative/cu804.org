@@ -1,4 +1,4 @@
-/* 10/02/2022 Copyright 2022 KJE Computer Solutions, Inc.  Licensed for use on cu804.org */ 
+/* 10/29/2023 Copyright 2023 KJE Computer Solutions, Inc.  Licensed for use on cu804.org */ 
 
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
@@ -40,12 +40,16 @@ body.KJEBody a, body.KJEBody a:hover, body.KJEBody a:visited, body.KJEBody a:act
 }
 
 
-#KJEAllContent, body.KJEBody, body.KJEReportBody {
+#KJEAllContent, body.KJEBody {
     -webkit-text-size-adjust: none;
     font-family: Arial,Helvetica,sans-serif;
     font-weight: normal;
     line-height: normal;
     font-size: 1.0rem;/*font_normal*/
+}
+
+#KJESplash {
+ color:#333333;
 }
 
 body.KJEReportBody {
@@ -178,6 +182,9 @@ div.KJEDropper, div.KJEGraphDropper
     margin: 0 auto;
     text-align: center
 }
+#KJEReportButtonsWrapper {
+    width:100%
+}
 
 #KJECalculatorTable {
     right:0;
@@ -195,6 +202,13 @@ div.KJEDropper, div.KJEGraphDropper
     -webkit-box-shadow: 0 0 0;
     -moz-box-shadow: 0 0 0;
     font-size: 1.0rem;/*font_normal*/
+    margin: 0 auto;
+}
+#KJECalculatorTableCell {
+    width:100%;
+}
+.KJEDisplayNone {
+  display:none !important;
 }
 
 div.KJECalculatorReportTable
@@ -874,6 +888,10 @@ div.KJECenterText {
 .KJEBold {
     font-weight: bold;
 }
+.KJEAlignTop {
+    vertical-align: top;
+}
+
 
 .KJEBoldCenter {
     font-weight: bold;
@@ -909,6 +927,8 @@ div.KJECenterText {
     box-shadow: 3px 3px 3px #333;
     -webkit-box-shadow: 3px 3px 3px #333;
     -moz-box-shadow: 3px 3px 3px #333;
+    top: 0;
+    left: 0;
 }
 
 #KJEGuiDataPoint dt {
@@ -1194,6 +1214,9 @@ td.KJEToggleTitle49Cell {
 .KJEGraphContainer {
     overflow: hidden;
 }
+div.KJEDropperSpacer {
+    height: 10px;
+}
 
 #KJE-C-REPORTGRAPH0, #KJE-C-REPORTGRAPH1, #KJE-C-REPORTGRAPH2, #KJE-C-REPORTGRAPH3, #KJE-C-REPORTGRAPH4, #KJE-C-REPORTGRAPH5  {
     text-align: center;
@@ -1203,6 +1226,8 @@ td.KJEToggleTitle49Cell {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     overflow: hidden;
     transition: height 0.5s ease 0s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2.KJEGraphTitle {
@@ -1221,11 +1246,24 @@ h2.KJEGraphTitle {
     -webkit-margin-end: 0;
 }
 
-.KJEGraphReport {
+figure.KJEAdaGraphFigure {
+    margin:0;
+    padding:0;
+}
+
+div.KJEGraphReport {
     page-break-inside: avoid;
     margin: 0 auto;
     margin-top: 15px;
     text-align: center;
+}
+div.KJEGraphCanvasContainer {
+    width:100%;
+}
+div.KJEGraphCanvasContainer {
+    width:100%;
+}
+canvas.KJEGraphCanvas {
 }
 
 .KJEDropperReport {
@@ -1434,6 +1472,10 @@ table.KJEScheduleTable caption.KJEHeaderRow
 {
     border-bottom:none;
     caption-side: top;
+}
+
+div.KJERightMargin {
+    margin-right:10px
 }
 
 .KJELeft, table.KJEReportTable th.KJELeftPad, table.KJECalcTable th.KJELeftPad  {
@@ -1645,10 +1687,22 @@ table.KJEScheduleTable th.KJEScheduleHeading {
     border: none;
 }
 
-.KJEMinHeight2 {
-    height:30px;
-    padding: 10px;
+table.KJEScheduleTable th.KJEScheduleHeadingBorder {
+    border-width: 0;
+    border-style: solid;
+    border-width: 0 1px 0 1px;
 }
+table.KJEScheduleTable th.KJEScheduleHeadingLeftBorder {
+    border-width: 0;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+}
+table.KJEScheduleTable th.KJEScheduleHeadingRightBorder {
+    border-width: 0;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+}
+
 
 table.KJEScheduleTable td.KJEScheduleCell,
 table.KJEScheduleTable th.KJEScheduleCell,
@@ -1901,7 +1955,7 @@ div.KJELogo {
 }
 
 @media print {
-    .KJENoPrint {
+    .KJENoPrint, #KJEBubbleHolder, .nav_box {
         display: none !important;
     }
 
@@ -2620,7 +2674,11 @@ table.KJEScheduleTable td.KJEScheduleCell, table.KJEScheduleTable td.KJESchedule
 table.KJEScheduleTable th.KJEScheduleHeading, table.KJEScheduleTable th.KJEScheduleCell, table.KJEScheduleTable th.KJEScheduleCellStrong,
 table.KJEReportTable td.KJECellBorder, table.KJEReportTable th.KJECellBorder,
 table.KJECalcTable th.KJECellBorder, table.KJECalcTable td.KJECellBorder,
-table.KJEScheduleTable td.KJECellBorder, table.KJEScheduleTable th.KJECellBorder {
+table.KJEScheduleTable td.KJECellBorder, table.KJEScheduleTable th.KJECellBorder,
+table.KJEScheduleTable th.KJEScheduleHeadingBorder,
+table.KJEScheduleTable th.KJEScheduleHeadingLeftBorder,
+table.KJEScheduleTable th.KJEScheduleHeadingRightBorder
+{
     border-color: #565656;
 }
 
@@ -2851,6 +2909,41 @@ input[type="range"]::-moz-range-progress {
     margin:auto;
     text-align:left;
 }
+
+div.KJEFinCalResults {
+    font-weight: bold;
+    font-size: 1.0rem;/*font_normal*/
+    height: 300px;
+    overflow: scroll;
+}
+
+input.KJEFinCalcButton {
+    font-weight: bold;
+    font-size: 1.0rem;/*font_normal*/
+    width: 85%;
+    height: 45px;
+}
+
+table.KJEFinCalcTable {
+    width: 100%;
+    border: none;
+}
+table.KJEFinCalcTable tr {
+    border: none;
+}
+table.KJEFinCalcTable td {
+    border: none;
+    width: 20%;
+}
+h2.KJERedHeading, div.KJERedHeading {
+  color:#FF0000;
+}
+
+h2.KJEBackgroundYellow, div.KJEBackgroundYellow, span.KJEBackgroundYellow, td.KJEBackgroundYellow, table.KJEScheduleTable tbody.KJEScheduleTBody th.KJEBackgroundYellow {
+  background: yellow;
+    color:#222222;
+}
+
 /*Proofing CSS*/
 h1.KJEFontTitle, #KJETitle, #KJEAllContent h1, #KJEAllContent h2.KJEDefinitionsHeader, #KJEAllContent h2.KJEReportHeader, #KJEAllContent h2.KJEScheduleHeader,
 #KJEAllContent h2.KJEToggleTitle ,  #KJEAllContent h2.KJEGraphTitle, div.KJESideBar h4  {
