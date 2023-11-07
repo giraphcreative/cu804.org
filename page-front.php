@@ -19,6 +19,7 @@ get_header();
 			<?php
 			$args = array(
 				'post_type' => array( 'post' ),
+				'category_name' => 'homepage',
 				'post_count' => 3
 			);
 
