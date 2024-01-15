@@ -47,7 +47,7 @@
 
 		<div class="search-box">
 			<a href="/contact" class="contact">Contact Us</a>
-			<a href="https://cu804.locatorsearch.com/" class="locations">Locations</a>
+			<a href="https://cu804.locatorsearch.net/" class="locations">Locations</a>
 			<a href="/rates" class="rates">Rates</a>
 			<a href="/secure-login" class="online-banking-mobile">Online Banking</a>
 			<form name="search" action="/" method="get"><span class="search-label">Search</span> <input type="text" name="s" value="" /></form>
