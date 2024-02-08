@@ -1,4 +1,4 @@
-/* 10/29/2023 Copyright 2023 KJE Computer Solutions, Inc.  Licensed for use on cu804.org */ 
+/* 01/09/2024 Copyright 2024 KJE Computer Solutions, Inc.  Licensed for use on cu804.org */ 
 
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
@@ -430,9 +430,12 @@ button.KJEMenu:hover {
     z-index: 999;
 }
 
-.KJEInset {
+#KJEReport div.KJEInset {
     margin-left: 20px;
     margin-right: 20px;
+}
+#KJEReport div.KJEInset, #KJEReport div.KJEInset * {
+    font-size: 0.8rem;/*font_tiny*/
 }
 
 #KJEReport {
@@ -1604,6 +1607,7 @@ div.KJECalcTableDivLeft, div.KJECalcTableDivRight {
 div.KJECalcTableDivLeft {
     float: left;
     margin-right: 3px;
+    background:#f7f7f7;;
 }
 
 div.KJECalcTableDivLeft::after, div.KJECalcTableDivRight::after {

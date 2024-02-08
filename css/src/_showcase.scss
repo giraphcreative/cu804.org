@@ -50,6 +50,7 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
+			z-index: 10;
 		}
 
 		.slide-content {
@@ -63,6 +64,7 @@
 			pointer-events: none;
 			max-width: 500px;
 			margin: 40px 60px;
+			z-index: 100;
 
 			@include respond-to( 768px ) {
 				top: 50%;
