@@ -54,7 +54,7 @@ jQuery(document).ready(function($){
 			the_link_href.charAt(0) === '#' || 
 			the_link_href.charAt(0) === '/' ) {
 			location.href = the_link_href.match();
-		} else if ( the_link_href.match( '/docusign.net/i' ) ) {
+		} else if ( the_link_href.match( /docusign.net/i ) ) {
 			if ( confirm( "You are about to leave Local 804 FCU's website to be directed to a business partner site. Local 804 FCU is not responsible for the web content, security or privacy policies of business partner sites." ) ) {
 				window.open( the_link_href, "_blank" );
 			}
