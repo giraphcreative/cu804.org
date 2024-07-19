@@ -11,8 +11,6 @@
   KJE.parameters.set("TAXABLE_FEES",0);
   KJE.parameters.set("TERM",84);
   KJE.parameters.set("TRADE_ALLOWANCE",5000);
-  KJE.parameters.set("PAYMENT_TYPE_HIDE",true);
-
 
 
 /**V3_CUSTOM_CODE**/

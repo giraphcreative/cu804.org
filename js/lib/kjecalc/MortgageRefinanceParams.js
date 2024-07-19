@@ -12,7 +12,7 @@
   KJE.parameters.set("NEW_RATE",KJE.Default.RateFix30);
   KJE.parameters.set("OLD_LOAN_APPRAISED_VALUE",KJE.Default.HomePrice);
   KJE.parameters.set("ORIGINAL_LOAN_AMT",KJE.Default.MortgageAmt);
-  KJE.parameters.set("OTHER_CLOSING_COSTS",800);
+  KJE.parameters.set(("OTHER_CLOSING_COSTS",2000));
   KJE.parameters.set("PLEASE_COMPUTE",1);
   KJE.parameters.set("PMI_PERCENT",0.20);
   KJE.parameters.set("PMI_RATE",0.5);

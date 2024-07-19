@@ -26,6 +26,6 @@ KJE.sEmailFooter = "\n\n--------------------------------------------------------
 //KJE.colorList             =["","#dfe0db","#DDDDDD","#CCCCCC","#CCDDCC","#CCCCDD","#DDCCCC","#CCCCDD","#CCDDCC","#CCDDDD","#CCCCDD"];
 
 // Sample Report Header and Footer Information
-//KJE.ReportHeader="<div class='KJEReportTitleBlock'><div class='KJEReportTitle'>**REPORT_TITLE**</div><br><div class=KJELogo><img src='logo.png' class=KJELogo alt='BC Consulting'></div>cu804.org</div>";
+//KJE.ReportHeader="<div class='KJEReportTitleBlock'><div class='KJEReportTitle'>**REPORT_TITLE**</div><br><div class=KJELogo><img src='**LOGO**' class=KJELogo alt='BC Consulting'></div>**V3HEADERDATA**</div>";
 //KJE.ReportFooter="<div class=KJECenter><p><span class='KJEBold'><strong>BC Consulting</strong></span><br>220 8 Street SE<br>Washington, DC 20003</p><p class='KJEReportFooter KJECenter'>Information and interactive calculators are made available to you only as self-help tools for your independent use and are not intended to provide investment or tax advice. We cannot and do not guarantee their applicability or accuracy in regards to your individual circumstances. All examples are hypothetical and are for illustrative purposes. We encourage you to seek personalized advice from qualified professionals regarding all personal finance issues.</p></div><!--EXTRA_FOOTER-->";
 
