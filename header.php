@@ -55,9 +55,9 @@
 
 		<div class="online-banking">
 			<span class="heading">Online Banking</span>
-			<form action="https://www.mobicint.net/l80/" autocomplete="off" method="post" name="form" _lpchecked="1">
-				<input name="user" type="text" placeholder="Username" autocomplete="off">
-				<input name="password" type="password" placeholder="Password" autocomplete="off"><br>
+			<form action="https://www.mobicint.net/l80/" method="post" name="form">
+				<input name="user" type="text" placeholder="Username">
+				<input name="password" type="password" placeholder="Password"><br>
 				<input class="login login-submit" type="submit" value="Log In"> <a href="https://mobicint.net/l80/autoEnrollment" class="btn join">Join</a> <a href="https://www.mobicint.net/l80/forgotPassword" class="forgot">Forgot Password</a>
 			</form>
 		</div>
