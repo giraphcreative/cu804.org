@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=14" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=15" rel="stylesheet" type="text/css">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -58,7 +58,7 @@
 			<form action="https://www.mobicint.net/l80/" autocomplete="off" method="post" name="form" _lpchecked="1">
 				<input name="user" type="text" placeholder="Username" autocomplete="off">
 				<input name="password" type="password" placeholder="Password" autocomplete="off"><br>
-				<input class="login login-submit" type="submit" value="Log In"> <a href="https://www.mobicint.net/l80/forgotPassword/enterUsername" class="forgot">Forgot Password?</a>
+				<input class="login login-submit" type="submit" value="Log In"> <a href="https://mobicint.net/l80/autoEnrollment" class="btn join">Join</a> <a href="https://www.mobicint.net/l80/forgotPassword" class="forgot">Forgot Password</a>
 			</form>
 		</div>
 

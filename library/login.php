@@ -8,7 +8,7 @@ function online_branch_login() {
 		<input name="user" type="text" placeholder="Username" autocomplete="off"></p>
 	<p>Password:<br>
 		<input name="password" type="password" placeholder="Password" autocomplete="off"></p>
-	<p><input class="login login-submit" type="submit" value="Log In"> &nbsp; <a href="https://www.mobicint.net/l80/forgotPassword/enterUsername" class="forgot">Forgot Password?</a></p>
+	<p><input class="login login-submit" type="submit" value="Log In"> <a href="https://www.mobicint.net/l80/forgotPassword" class="forgot small">Help</a> <a href="https://www.mobicint.net/l80/forgotPassword" class="forgot small">Help</a></p>
 </form>
 EOD;
 	return $form_code;

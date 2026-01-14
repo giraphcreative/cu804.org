@@ -224,9 +224,17 @@ header {
 			background: $red url(../img/button-arrow.png) right center no-repeat;
 		}
 
-		.forgot {
-			@include font-bold;
+		.join {
+			clear: left;
+			margin-top: 4px;
+			padding: 5px 10px 5px 10px;
 			font-size: .9em;
+			background: $navy;
+		}
+
+		.forgot {
+			@include font;
+			font-size: .8em;
 			color: $navy;
 			margin-left: 10px;
 		}
