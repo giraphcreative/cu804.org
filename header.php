@@ -49,7 +49,7 @@
 			<a href="/contact" class="contact">Contact Us</a>
 			<a href="https://cu804.locatorsearch.net/" class="locations">Locations</a>
 			<a href="/rates" class="rates">Rates</a>
-			<a href="/secure-login" class="online-banking-mobile">Online Banking</a>
+			<a href="https://www.mobicint.net/l80/" class="online-banking-mobile">Online Banking</a>
 			<form name="search" action="/" method="get"><span class="search-label">Search</span> <input type="text" name="s" value="" /></form>
 		</div>
 
@@ -58,7 +58,7 @@
 			<form action="https://www.mobicint.net/l80/" method="post" name="form">
 				<input name="user" type="text" placeholder="Username">
 				<input name="password" type="password" placeholder="Password"><br>
-				<input class="login login-submit" type="submit" value="Log In"> <a href="https://mobicint.net/l80/autoEnrollment" class="btn join">Join</a> <a href="https://www.mobicint.net/l80/forgotPassword" class="forgot">Forgot Password</a>
+				<input class="login login-submit" type="submit" value="Log In"> <a href="https://mobicint.net/l80/autoEnrollment" class="btn join">Enroll</a> <a href="https://www.mobicint.net/l80/forgotPassword" class="forgot">Forgot Password</a>
 			</form>
 		</div>
 
