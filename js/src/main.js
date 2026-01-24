@@ -50,7 +50,7 @@ jQuery(document).ready(function($){
 			the_link_href.match( /cu804.org/i ) || 
 			the_link_href.match( /cu804.test/i ) || 
 			the_link_href.match( /cu804.giraph.io/i ) || 
-			the_link_href.match( /www.mobicint.net/i ) || 
+			the_link_href.match( /mobicint.net/i ) || 
 			the_link_href.charAt(0) === '#' || 
 			the_link_href.charAt(0) === '/' ) {
 			location.href = the_link_href;
