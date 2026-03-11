@@ -52,12 +52,15 @@ jQuery(document).ready(function($){
 			the_link_href.match( /cu804.giraph.io/i ) || 
 			the_link_href.match( /mobicint.net/i ) || 
 			the_link_href.charAt(0) === '#' || 
-			the_link_href.charAt(0) === '/' ) {
+			the_link_href.charAt(0) === '/' ||
+			the_link_href.match( /docusign/i ) ) {
 			location.href = the_link_href;
+		/*
 		} else if ( the_link_href.match( /docusign.net/i ) ) {
 			if ( confirm( "You are about to leave Local 804 FCU's website to be directed to a business partner site. Local 804 FCU is not responsible for the web content, security or privacy policies of business partner sites." ) ) {
 				window.open( the_link_href, "_blank" );
 			}
+		*/
 		} else {
 			if ( confirm( "This link is taking you to a third party provider - are you sure you want to proceed?" ) ) {
 				window.open( the_link_href, "_blank" );
